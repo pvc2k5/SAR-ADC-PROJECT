@@ -10,7 +10,7 @@ module sar_tb;
     wire reg_clk;
     wire EOC;
 
-    // Kết nối DUT (Device Under Test) - 10-bit SAR Logic
+    // Connect DUT (Device Under Test) - 10-bit SAR Logic
     sar_logic_10bit uut (
         .clk(clk),
         .rst_n(rst_n),
@@ -34,12 +34,10 @@ module sar_tb;
         rst_n = 1;
     end
 
-    // Giả lập comparator_out ngẫu nhiên
     always @(posedge clk) begin
         comparator_out <= $random % 2;
     end
 
-    // Tạo file VCD để xem bằng GTKWave
     initial begin
         $dumpfile("sar.vcd");
         $dumpvars(0, sar_tb);
