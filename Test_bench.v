@@ -5,13 +5,13 @@ module sar_tb;
     reg clk;
     reg rst_n;
     reg comparator_out;
-    wire [7:0] D;
+    wire [9:0] D;          
     wire sample_clk;
     wire reg_clk;
     wire EOC;
 
-    // Kết nối DUT (Device Under Test)
-    sar_logic uut (
+    // Kết nối DUT (Device Under Test) - 10-bit SAR Logic
+    sar_logic_10bit uut (
         .clk(clk),
         .rst_n(rst_n),
         .comparator_out(comparator_out),
@@ -21,7 +21,7 @@ module sar_tb;
         .EOC(EOC)
     );
 
-    // Clock 100MHz
+    // Tạo xung clock 100MHz (10ns period)
     initial begin
         clk = 0;
         forever #5 clk = ~clk;
@@ -34,16 +34,16 @@ module sar_tb;
         rst_n = 1;
     end
 
-    // Tạo comparator_out ngẫu nhiên
+    // Giả lập comparator_out ngẫu nhiên
     always @(posedge clk) begin
         comparator_out <= $random % 2;
     end
 
-    // Dump file cho GTKWave
+    // Tạo file VCD để xem bằng GTKWave
     initial begin
         $dumpfile("sar.vcd");
         $dumpvars(0, sar_tb);
-        #500 $finish;
+        #2000 $finish;
     end
 
 endmodule

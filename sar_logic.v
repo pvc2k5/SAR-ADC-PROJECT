@@ -1,47 +1,46 @@
-module sar_logic (
-    input  wire        clk,           // Clock
-    input  wire        rst_n,         // Active-low Reset
-    input  wire        comparator_out,// Comparator output (0 or 1)
-    output reg  [7:0]  D,             // DAC output code
-    output reg         sample_clk,    // Sample & Hold enable
-    output reg         reg_clk,       // Latch Register enable
-    output reg         EOC            // End Of Conversion
+module sar_logic_10bit (
+    input  wire         clk,            // Clock
+    input  wire         rst_n,          // Active-low Reset
+    input  wire         comparator_out, // Comparator output (0 or 1)
+    output reg  [9:0]   D,              // DAC output code (10-bit)
+    output reg          sample_clk,     // Sample & Hold enable
+    output reg          reg_clk,        // Latch Register enable
+    output reg          EOC             // End Of Conversion
 );
 
-    reg [3:0] counter;      // Count 0 -> 9 (sampling + 8 bits + latch) Đếm từ 0 → 9 (1 sample + 8 bits + 1 latch)
-    reg [7:0] seq;          // Sequencer to shift active bit Dịch từ MSB → LSB để tạo mã điều khiển DAC
-
+    reg [3:0] counter;    // Count 0 -> 11 (sampling + 10 bits + latch)
+    reg [9:0] seq;        // Sequencer 10-bit MSB -> LSB
 
     // Reset & Initial State
     always @(posedge clk or negedge rst_n) begin
-        if (!rst_n) begin // rst_n = 0 -> he thong can tro lai trang thai ban dau 
+        if (!rst_n) begin
             counter     <= 0;
-            seq         <= 8'b1000_0000; // msb -> lsb 
-            D           <= 8'b0000_0000; // dac se xuat ra min khi bat dau so sanh (reset dau ra cua dac)
-            sample_clk  <= 1'b1;   // First cycle is for sampling // tin hieu de mach sample and hold bat dau lay mau analog
-            reg_clk     <= 1'b0; // reg_clock = 0 (dang o trang thai reset)
-            EOC         <= 1'b0; // EOC = 0 // chua ket thuc qua trinh chuyen doi 
+            seq         <= 10'b1000_0000_00; // Start from MSB (bit 9)
+            D           <= 10'b0000_0000_00;
+            sample_clk  <= 1'b1;
+            reg_clk     <= 1'b0;
+            EOC         <= 1'b0;
         end else begin
             case (counter)
                 0: begin
-                    sample_clk <= 1'b1; // Sampling phase
+                    sample_clk <= 1'b1; 
                     reg_clk    <= 1'b0;
-                    D          <= 8'b0000_0000;
-                    seq        <= 8'b1000_0000;
+                    D          <= 10'b0000_0000_00;
+                    seq        <= 10'b1000_0000_00;
                     counter    <= counter + 1;
                     EOC        <= 0;
                 end
 
-                1,2,3,4,5,6,7,8: begin
+                1,2,3,4,5,6,7,8,9,10: begin
                     sample_clk <= 1'b0;
-                    D <= (D & ~seq) | (comparator_out ? seq : 8'b0);
+                    D <= (D & ~seq) | (comparator_out ? seq : 10'b0);
                     seq <= seq >> 1;
                     counter <= counter + 1;
                     reg_clk <= 0;
                     EOC <= 0;
                 end
 
-                9: begin
+                11: begin
                     reg_clk <= 1;
                     EOC     <= 1;   // End of conversion
                     counter <= 0;   // Ready for next conversion
