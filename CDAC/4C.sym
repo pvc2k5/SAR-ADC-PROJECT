@@ -1,0 +1,21 @@
+v {xschem version=3.4.8RC file_version=1.2}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 240 -450 240 -330 {}
+L 4 370 -450 370 -330 {}
+L 4 240 -330 370 -330 {}
+L 4 240 -450 370 -450 {}
+L 7 290 -470 290 -450 {}
+L 7 320 -330 320 -310 {}
+B 5 287.5 -472.5 292.5 -467.5 {name=bottom_plate dir=inout}
+B 5 317.5 -312.5 322.5 -307.5 {name=top_plate dir=inout}
+T {4C} 243 -406 0 0 0.3 0.3 {}
+T {@name} 355 -462 0 0 0.2 0.2 {}
+T {bottom_plate} 286 -445 3 1 0.2 0.2 {}
+T {top_plate} 324 -335 1 1 0.2 0.2 {}
