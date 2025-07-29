@@ -1,0 +1,114 @@
+v {xschem version=3.4.8RC file_version=1.2}
+G {}
+K {}
+V {}
+S {}
+F {}
+E {}
+L 4 610 -700 870 -700 {}
+L 4 610 -120 870 -120 {}
+L 4 560 -700 560 -320 {}
+L 4 540 -690 560 -690 {}
+L 4 540 -510 560 -510 {}
+L 4 540 -600 560 -600 {}
+L 4 540 -580 560 -580 {}
+L 4 900 -670 920 -670 {}
+L 4 900 -630 920 -630 {}
+L 4 900 -170 920 -170 {}
+L 4 900 -150 920 -150 {}
+L 4 900 -210 920 -210 {}
+L 4 900 -270 920 -270 {}
+L 4 900 -250 920 -250 {}
+L 4 900 -350 920 -350 {}
+L 4 900 -330 920 -330 {}
+L 4 900 -390 920 -390 {}
+L 4 900 -450 920 -450 {}
+L 4 900 -430 920 -430 {}
+L 4 900 -690 920 -690 {}
+L 4 540 -670 560 -670 {}
+L 4 900 -590 920 -590 {}
+L 4 900 -570 920 -570 {}
+L 4 900 -550 920 -550 {}
+L 4 900 -530 920 -530 {}
+L 4 870 -700 900 -700 {}
+L 4 870 -120 900 -120 {}
+L 4 570 -700 610 -700 {}
+L 4 560 -700 570 -700 {}
+L 4 560 -120 610 -120 {}
+L 4 560 -320 560 -200 {}
+L 4 900 -700 900 -200 {}
+L 4 900 -230 920 -230 {}
+L 4 900 -190 920 -190 {}
+L 4 900 -410 920 -410 {}
+L 4 900 -370 920 -370 {}
+L 4 900 -200 900 -120 {}
+L 4 560 -200 560 -120 {}
+L 4 900 -650 920 -650 {}
+L 7 740 -720 740 -700 {}
+L 7 740 -120 740 -100 {}
+B 5 737.5 -722.5 742.5 -717.5 {name=a_VPWR dir=inout }
+B 5 737.5 -102.5 742.5 -97.5 {name=a_VGND dir=inout }
+B 5 537.5 -692.5 542.5 -687.5 {name=a_clk_dig_in dir=in }
+B 5 537.5 -512.5 542.5 -507.5 {name=a_comparator_in dir=in }
+B 5 537.5 -602.5 542.5 -597.5 {name=a_config_1_in_[0..9]_ dir=in }
+B 5 537.5 -582.5 542.5 -577.5 {name=a_config_2_in_[0..9]_ dir=in }
+B 5 917.5 -672.5 922.5 -667.5 {name=a_conv_finished_out dir=out }
+B 5 917.5 -632.5 922.5 -627.5 {name=a_enable_loop_out dir=out }
+B 5 917.5 -172.5 922.5 -167.5 {name=a_nmatrix_bincap_out_n_[0..2]_ dir=out }
+B 5 917.5 -152.5 922.5 -147.5 {name=a_nmatrix_c0_out_n dir=out }
+B 5 917.5 -212.5 922.5 -207.5 {name=a_nmatrix_col_out_n_[0..12]_ dir=out }
+B 5 917.5 -272.5 922.5 -267.5 {name=a_nmatrix_row_out_n_[0..9]_ dir=out }
+B 5 917.5 -252.5 922.5 -247.5 {name=a_nmatrix_rowon_out_n_[0..9]_ dir=out }
+B 5 917.5 -352.5 922.5 -347.5 {name=a_pmatrix_bincap_out_n_[0..2]_ dir=out }
+B 5 917.5 -332.5 922.5 -327.5 {name=a_pmatrix_c0_out_n dir=out }
+B 5 917.5 -392.5 922.5 -387.5 {name=a_pmatrix_col_out_n_[0..12]_ dir=out }
+B 5 917.5 -452.5 922.5 -447.5 {name=a_pmatrix_row_out_n_[0..9]_ dir=out }
+B 5 917.5 -432.5 922.5 -427.5 {name=a_pmatrix_rowon_out_n_[0..9]_ dir=out }
+B 5 917.5 -692.5 922.5 -687.5 {name=a_result_out_[0..9]_ dir=out }
+B 5 537.5 -672.5 542.5 -667.5 {name=a_rst_n dir=in }
+B 5 917.5 -592.5 922.5 -587.5 {name=a_sample_matrix_out dir=out }
+B 5 917.5 -572.5 922.5 -567.5 {name=a_sample_matrix_out_n dir=out }
+B 5 917.5 -552.5 922.5 -547.5 {name=a_sample_switch_out dir=out }
+B 5 917.5 -532.5 922.5 -527.5 {name=a_sample_switch_out_n dir=out }
+B 5 917.5 -232.5 922.5 -227.5 {name=a_nmatrix_rowoff_out_n_[0..9]_ dir=out }
+B 5 917.5 -192.5 922.5 -187.5 {name=a_nmatrix_col_out_[0..12]_ dir=out }
+B 5 917.5 -412.5 922.5 -407.5 {name=a_pmatrix_rowoff_out_n_[0..9]_ dir=out }
+B 5 917.5 -372.5 922.5 -367.5 {name=a_pmatrix_col_out_[0..12]_ dir=out }
+B 5 917.5 -652.5 922.5 -647.5 {name=a_conv_finished_osr_out dir=out }
+T {@symname} 790 -116 0 0 0.3 0.3 {}
+T {@name} 795 -92 0 0 0.2 0.2 {}
+T {a_VPWR} 705 -686 2 1 0.2 0.2 {}
+T {a_VGND} 725 -126 2 1 0.2 0.2 {}
+T {a_clk_dig_in} 565 -694 0 0 0.2 0.2 {}
+T {a_comparator_in} 565 -514 0 0 0.2 0.2 {}
+T {a_config_1_in_[0..9]_} 565 -604 0 0 0.2 0.2 {}
+T {a_config_2_in_[0..9]_} 565 -584 0 0 0.2 0.2 {}
+T {a_conv_finished_out} 895 -674 0 1 0.2 0.2 {}
+T {a_enable_loop_out} 895 -634 0 1 0.2 0.2 {}
+T {a_nmatrix_bincap_out_n_[0..2]_} 895 -174 0 1 0.2 0.2 {}
+T {a_nmatrix_c0_out_n} 895 -154 0 1 0.2 0.2 {}
+T {a_nmatrix_col_out_n_[0..12]_} 895 -214 0 1 0.2 0.2 {}
+T {a_nmatrix_row_out_n_[0..9]_} 895 -274 0 1 0.2 0.2 {}
+T {a_nmatrix_rowon_out_n_[0..9]_} 895 -254 0 1 0.2 0.2 {}
+T {a_pmatrix_bincap_out_n_[0..2]_} 895 -354 0 1 0.2 0.2 {}
+T {a_pmatrix_c0_out_n} 895 -334 0 1 0.2 0.2 {}
+T {a_pmatrix_col_out_n_[0..12]_} 895 -394 0 1 0.2 0.2 {}
+T {a_pmatrix_row_out_n_[0..9]_} 895 -454 0 1 0.2 0.2 {}
+T {a_pmatrix_rowon_out_n_[0..9]_} 895 -434 0 1 0.2 0.2 {}
+T {a_result_out_[0..9]_} 895 -694 0 1 0.2 0.2 {}
+T {a_rst_n} 565 -674 0 0 0.2 0.2 {}
+T {a_sample_matrix_out} 895 -594 0 1 0.2 0.2 {}
+T {a_sample_matrix_out_n} 895 -574 0 1 0.2 0.2 {}
+T {a_sample_switch_out} 895 -554 0 1 0.2 0.2 {}
+T {a_sample_switch_out_n} 895 -534 0 1 0.2 0.2 {}
+T {P-MATRIX} 790 -480 0 0 0.4 0.4 {}
+T {N-MATRIX} 790 -300 0 0 0.4 0.4 {}
+T {CTRL} 840 -620 0 0 0.4 0.4 {}
+T {DIGITAL
+CORE} 570 -320 0 0 0.6 0.6 {}
+T {.XSPICE} 570 -250 0 0 0.6 0.6 {}
+T {a_nmatrix_rowoff_out_n_[0..9]_} 895 -234 0 1 0.2 0.2 {}
+T {a_nmatrix_col_out_[0..12]_} 895 -194 0 1 0.2 0.2 {}
+T {a_pmatrix_rowoff_out_n_[0..9]_} 895 -414 0 1 0.2 0.2 {}
+T {a_pmatrix_col_out_[0..12]_} 895 -374 0 1 0.2 0.2 {}
+T {a_conv_finished_osr_out} 895 -654 0 1 0.2 0.2 {}
