@@ -1,0 +1,626 @@
+** sch_path: /home/tien/gf180ex/adc_sar_matrix10bit.sch
+**.subckt adc_sar_matrix10bit row_n[0],row_n[1],row_n[2],row_n[3],row_n[4],row_n[5],row_n[6],row_n[7],row_n[8],row_n[9]
+*+ rowon_n[0],rowon_n[1],rowon_n[2],rowon_n[3],rowon_n[4],rowon_n[5],rowon_n[6],rowon_n[7],rowon_n[8],rowon_n[9] rowoff_n[0],rowoff_n[1],rowoff_n[2],rowoff_n[3],rowoff_n[4],rowoff_n[5],rowoff_n[6],rowoff_n[7],rowoff_n[8],rowoff_n[9]
+*+ col_n[0],col_n[1],col_n[2],col_n[3],col_n[4],col_n[5],col_n[6],col_n[7],col_n[8],col_n[9],col_n[10],col_n[11],col_n[12] col[0],col[1],col[2],col[3],col[4],col[5],col[6],col[7],col[8],col[9],col[10],col[11],col[12] VDD VSS vcm sample sample_n
+*+ en_bit_n[0],en_bit_n[1],en_bit_n[2] en_C0_n sw sw_n analog_in ctop
+*.iopin VDD
+*.iopin VSS
+*.iopin vcm
+*.ipin sample
+*.ipin sample_n
+*.ipin row_n[0],row_n[1],row_n[2],row_n[3],row_n[4],row_n[5],row_n[6],row_n[7],row_n[8],row_n[9]
+*.ipin rowon_n[0],rowon_n[1],rowon_n[2],rowon_n[3],rowon_n[4],rowon_n[5],rowon_n[6],rowon_n[7],rowon_n[8],rowon_n[9]
+*.ipin col_n[0],col_n[1],col_n[2],col_n[3],col_n[4],col_n[5],col_n[6],col_n[7],col_n[8],col_n[9],col_n[10],col_n[11],col_n[12]
+*.ipin en_bit_n[0],en_bit_n[1],en_bit_n[2]
+*.ipin en_C0_n
+*.ipin sw
+*.ipin sw_n
+*.ipin analog_in
+*.iopin ctop
+*.ipin col[0],col[1],col[2],col[3],col[4],col[5],col[6],col[7],col[8],col[9],col[10],col[11],col[12]
+*.ipin rowoff_n[0],rowoff_n[1],rowoff_n[2],rowoff_n[3],rowoff_n[4],rowoff_n[5],rowoff_n[6],rowoff_n[7],rowoff_n[8],rowoff_n[9]
+x2 VDD ctop vcm VDD VSS sample_n sample VSS VDD net24 net23 VDD VSS adc_sar_wafflecap_drv
+x1 VDD ctop vcm VDD VSS net24 net23 VSS col_n[0] col[0] VDD adc_sar_wafflecap_dummy
+x3 VDD ctop vcm VDD VSS net24 net23 VSS col_n[1] en_C0_n VDD col[1] adc_sar_wafflecap_8_1
+x4 VDD ctop vcm VDD VSS net24 net23 VSS col_n[2] col[2] VDD adc_sar_wafflecap_dummy
+x5 VDD ctop vcm VDD VSS net24 net23 VSS col_n[3] col[3] VDD adc_sar_wafflecap_dummy
+x6 VDD ctop vcm VDD VSS net24 net23 VSS col_n[4] col[4] VDD adc_sar_wafflecap_dummy
+x7 VDD ctop vcm VDD VSS net24 net23 VSS col_n[5] col[5] VDD adc_sar_wafflecap_dummy
+x11 VDD ctop vcm VDD VSS net24 net23 VSS col_n[9] col[9] VDD adc_sar_wafflecap_dummy
+x12 VDD ctop vcm VDD VSS net24 net23 VSS col_n[10] col[10] VDD adc_sar_wafflecap_dummy
+x13 VDD ctop vcm VDD VSS net24 net23 VSS col_n[11] col[11] VDD adc_sar_wafflecap_dummy
+x8 VDD ctop vcm VDD VSS net24 net23 VSS col_n[6] en_bit_n[1] VDD col[6] adc_sar_wafflecap_8_2
+x9 VDD ctop vcm VDD VSS net24 net23 VSS col_n[7] en_bit_n[2] VDD col[7] adc_sar_wafflecap_8_4
+x10 VDD ctop vcm VDD VSS net24 net23 VSS col_n[8] en_bit_n[0] VDD col[8] adc_sar_wafflecap_8_1
+x17 VDD ctop vcm row_n[0] rowon_n[0] sample_n sample VSS VDD net22 net21 rowoff_n[0] VSS adc_sar_wafflecap_drv
+x18 VDD ctop vcm row_n[0] rowon_n[0] net22 net21 VSS col_n[0] col[0] rowoff_n[0] adc_sar_wafflecap_dummy
+x19 VDD ctop vcm row_n[0] rowon_n[0] net22 net21 VSS col_n[1] col[1] rowoff_n[0] adc_sar_wafflecap_dummy
+x20 VDD ctop vcm row_n[0] rowon_n[0] net22 net21 VSS col_n[2] col[2] rowoff_n[0] adc_sar_wafflecap_dummy
+x21 VDD ctop vcm row_n[0] rowon_n[0] net22 net21 VSS col_n[3] rowoff_n[0] col[3] adc_sar_wafflecap_8_8
+x22 VDD ctop vcm row_n[0] rowon_n[0] net22 net21 VSS col_n[4] rowoff_n[0] col[4] adc_sar_wafflecap_8_8
+x23 VDD ctop vcm row_n[0] rowon_n[0] net22 net21 VSS col_n[5] rowoff_n[0] col[5] adc_sar_wafflecap_8_8
+x24 VDD ctop vcm row_n[0] rowon_n[0] net22 net21 VSS col_n[6] rowoff_n[0] col[6] adc_sar_wafflecap_8_8
+x25 VDD ctop vcm row_n[0] rowon_n[0] net22 net21 VSS col_n[7] rowoff_n[0] col[7] adc_sar_wafflecap_8_8
+x26 VDD ctop vcm row_n[0] rowon_n[0] net22 net21 VSS col_n[8] rowoff_n[0] col[8] adc_sar_wafflecap_8_8
+x27 VDD ctop vcm row_n[0] rowon_n[0] net22 net21 VSS col_n[9] rowoff_n[0] col[9] adc_sar_wafflecap_8_8
+x28 VDD ctop vcm row_n[0] rowon_n[0] net22 net21 VSS col_n[10] col[10] rowoff_n[0] adc_sar_wafflecap_dummy
+x29 VDD ctop vcm row_n[0] rowon_n[0] net22 net21 VSS col_n[11] col[11] rowoff_n[0] adc_sar_wafflecap_dummy
+x30 VDD ctop vcm row_n[0] rowon_n[0] net22 net21 VSS col_n[12] col[12] rowoff_n[0] adc_sar_wafflecap_dummy
+x31 VDD ctop vcm row_n[0] rowon_n[0] net22 net21 VSS VDD VSS rowoff_n[0] adc_sar_wafflecap_dummy
+x33 VDD ctop vcm row_n[1] rowon_n[1] sample_n sample VSS VDD net2 net1 rowoff_n[1] VSS adc_sar_wafflecap_drv
+x34 VDD ctop vcm row_n[1] rowon_n[1] net2 net1 VSS col_n[0] rowoff_n[1] col[0] adc_sar_wafflecap_8_8
+x35 VDD ctop vcm row_n[1] rowon_n[1] net2 net1 VSS col_n[1] rowoff_n[1] col[1] adc_sar_wafflecap_8_8
+x36 VDD ctop vcm row_n[1] rowon_n[1] net2 net1 VSS col_n[2] rowoff_n[1] col[2] adc_sar_wafflecap_8_8
+x37 VDD ctop vcm row_n[1] rowon_n[1] net2 net1 VSS col_n[3] rowoff_n[1] col[3] adc_sar_wafflecap_8_8
+x38 VDD ctop vcm row_n[1] rowon_n[1] net2 net1 VSS col_n[4] rowoff_n[1] col[4] adc_sar_wafflecap_8_8
+x39 VDD ctop vcm row_n[1] rowon_n[1] net2 net1 VSS col_n[5] rowoff_n[1] col[5] adc_sar_wafflecap_8_8
+x40 VDD ctop vcm row_n[1] rowon_n[1] net2 net1 VSS col_n[6] rowoff_n[1] col[6] adc_sar_wafflecap_8_8
+x41 VDD ctop vcm row_n[1] rowon_n[1] net2 net1 VSS col_n[7] rowoff_n[1] col[7] adc_sar_wafflecap_8_8
+x42 VDD ctop vcm row_n[1] rowon_n[1] net2 net1 VSS col_n[8] rowoff_n[1] col[8] adc_sar_wafflecap_8_8
+x43 VDD ctop vcm row_n[1] rowon_n[1] net2 net1 VSS col_n[9] rowoff_n[1] col[9] adc_sar_wafflecap_8_8
+x44 VDD ctop vcm row_n[1] rowon_n[1] net2 net1 VSS col_n[10] rowoff_n[1] col[10] adc_sar_wafflecap_8_8
+x45 VDD ctop vcm row_n[1] rowon_n[1] net2 net1 VSS col_n[11] rowoff_n[1] col[11] adc_sar_wafflecap_8_8
+x46 VDD ctop vcm row_n[1] rowon_n[1] net2 net1 VSS col_n[12] rowoff_n[1] col[12] adc_sar_wafflecap_8_8
+x49 VDD ctop vcm row_n[2] rowon_n[2] sample_n sample VSS VDD net4 net3 rowoff_n[2] VSS adc_sar_wafflecap_drv
+x50 VDD ctop vcm row_n[2] rowon_n[2] net4 net3 VSS col_n[0] rowoff_n[2] col[0] adc_sar_wafflecap_8_8
+x51 VDD ctop vcm row_n[2] rowon_n[2] net4 net3 VSS col_n[1] rowoff_n[2] col[1] adc_sar_wafflecap_8_8
+x52 VDD ctop vcm row_n[2] rowon_n[2] net4 net3 VSS col_n[2] rowoff_n[2] col[2] adc_sar_wafflecap_8_8
+x53 VDD ctop vcm row_n[2] rowon_n[2] net4 net3 VSS col_n[3] rowoff_n[2] col[3] adc_sar_wafflecap_8_8
+x54 VDD ctop vcm row_n[2] rowon_n[2] net4 net3 VSS col_n[4] rowoff_n[2] col[4] adc_sar_wafflecap_8_8
+x55 VDD ctop vcm row_n[2] rowon_n[2] net4 net3 VSS col_n[5] rowoff_n[2] col[5] adc_sar_wafflecap_8_8
+x56 VDD ctop vcm row_n[2] rowon_n[2] net4 net3 VSS col_n[6] rowoff_n[2] col[6] adc_sar_wafflecap_8_8
+x57 VDD ctop vcm row_n[2] rowon_n[2] net4 net3 VSS col_n[7] rowoff_n[2] col[7] adc_sar_wafflecap_8_8
+x58 VDD ctop vcm row_n[2] rowon_n[2] net4 net3 VSS col_n[8] rowoff_n[2] col[8] adc_sar_wafflecap_8_8
+x59 VDD ctop vcm row_n[2] rowon_n[2] net4 net3 VSS col_n[9] rowoff_n[2] col[9] adc_sar_wafflecap_8_8
+x60 VDD ctop vcm row_n[2] rowon_n[2] net4 net3 VSS col_n[10] rowoff_n[2] col[10] adc_sar_wafflecap_8_8
+x61 VDD ctop vcm row_n[2] rowon_n[2] net4 net3 VSS col_n[11] rowoff_n[2] col[11] adc_sar_wafflecap_8_8
+x62 VDD ctop vcm row_n[2] rowon_n[2] net4 net3 VSS col_n[12] rowoff_n[2] col[12] adc_sar_wafflecap_8_8
+x65 VDD ctop vcm row_n[3] rowon_n[3] sample_n sample VSS VDD net6 net5 rowoff_n[3] VSS adc_sar_wafflecap_drv
+x66 VDD ctop vcm row_n[3] rowon_n[3] net6 net5 VSS col_n[0] rowoff_n[3] col[0] adc_sar_wafflecap_8_8
+x67 VDD ctop vcm row_n[3] rowon_n[3] net6 net5 VSS col_n[1] rowoff_n[3] col[1] adc_sar_wafflecap_8_8
+x68 VDD ctop vcm row_n[3] rowon_n[3] net6 net5 VSS col_n[2] rowoff_n[3] col[2] adc_sar_wafflecap_8_8
+x69 VDD ctop vcm row_n[3] rowon_n[3] net6 net5 VSS col_n[3] rowoff_n[3] col[3] adc_sar_wafflecap_8_8
+x70 VDD ctop vcm row_n[3] rowon_n[3] net6 net5 VSS col_n[4] rowoff_n[3] col[4] adc_sar_wafflecap_8_8
+x71 VDD ctop vcm row_n[3] rowon_n[3] net6 net5 VSS col_n[5] rowoff_n[3] col[5] adc_sar_wafflecap_8_8
+x72 VDD ctop vcm row_n[3] rowon_n[3] net6 net5 VSS col_n[6] rowoff_n[3] col[6] adc_sar_wafflecap_8_8
+x73 VDD ctop vcm row_n[3] rowon_n[3] net6 net5 VSS col_n[7] rowoff_n[3] col[7] adc_sar_wafflecap_8_8
+x74 VDD ctop vcm row_n[3] rowon_n[3] net6 net5 VSS col_n[8] rowoff_n[3] col[8] adc_sar_wafflecap_8_8
+x75 VDD ctop vcm row_n[3] rowon_n[3] net6 net5 VSS col_n[9] rowoff_n[3] col[9] adc_sar_wafflecap_8_8
+x76 VDD ctop vcm row_n[3] rowon_n[3] net6 net5 VSS col_n[10] rowoff_n[3] col[10] adc_sar_wafflecap_8_8
+x77 VDD ctop vcm row_n[3] rowon_n[3] net6 net5 VSS col_n[11] rowoff_n[3] col[11] adc_sar_wafflecap_8_8
+x78 VDD ctop vcm row_n[3] rowon_n[3] net6 net5 VSS col_n[12] rowoff_n[3] col[12] adc_sar_wafflecap_8_8
+x81 VDD ctop vcm row_n[4] rowon_n[4] sample_n sample VSS VDD net8 net7 rowoff_n[4] VSS adc_sar_wafflecap_drv
+x82 VDD ctop vcm row_n[4] rowon_n[4] net8 net7 VSS col_n[0] rowoff_n[4] col[0] adc_sar_wafflecap_8_8
+x83 VDD ctop vcm row_n[4] rowon_n[4] net8 net7 VSS col_n[1] rowoff_n[4] col[1] adc_sar_wafflecap_8_8
+x84 VDD ctop vcm row_n[4] rowon_n[4] net8 net7 VSS col_n[2] rowoff_n[4] col[2] adc_sar_wafflecap_8_8
+x85 VDD ctop vcm row_n[4] rowon_n[4] net8 net7 VSS col_n[3] rowoff_n[4] col[3] adc_sar_wafflecap_8_8
+x86 VDD ctop vcm row_n[4] rowon_n[4] net8 net7 VSS col_n[4] rowoff_n[4] col[4] adc_sar_wafflecap_8_8
+x87 VDD ctop vcm row_n[4] rowon_n[4] net8 net7 VSS col_n[5] rowoff_n[4] col[5] adc_sar_wafflecap_8_8
+x88 VDD ctop vcm row_n[4] rowon_n[4] net8 net7 VSS col_n[6] rowoff_n[4] col[6] adc_sar_wafflecap_8_8
+x89 VDD ctop vcm row_n[4] rowon_n[4] net8 net7 VSS col_n[7] rowoff_n[4] col[7] adc_sar_wafflecap_8_8
+x90 VDD ctop vcm row_n[4] rowon_n[4] net8 net7 VSS col_n[8] rowoff_n[4] col[8] adc_sar_wafflecap_8_8
+x91 VDD ctop vcm row_n[4] rowon_n[4] net8 net7 VSS col_n[9] rowoff_n[4] col[9] adc_sar_wafflecap_8_8
+x92 VDD ctop vcm row_n[4] rowon_n[4] net8 net7 VSS col_n[10] rowoff_n[4] col[10] adc_sar_wafflecap_8_8
+x93 VDD ctop vcm row_n[4] rowon_n[4] net8 net7 VSS col_n[11] rowoff_n[4] col[11] adc_sar_wafflecap_8_8
+x94 VDD ctop vcm row_n[4] rowon_n[4] net8 net7 VSS col_n[12] rowoff_n[4] col[12] adc_sar_wafflecap_8_8
+x97 VDD ctop vcm row_n[5] rowon_n[5] sample_n sample VSS VDD net10 net9 rowoff_n[5] VSS adc_sar_wafflecap_drv
+x98 VDD ctop vcm row_n[5] rowon_n[5] net10 net9 VSS col_n[0] rowoff_n[5] col[0] adc_sar_wafflecap_8_8
+x99 VDD ctop vcm row_n[5] rowon_n[5] net10 net9 VSS col_n[1] rowoff_n[5] col[1] adc_sar_wafflecap_8_8
+x100 VDD ctop vcm row_n[5] rowon_n[5] net10 net9 VSS col_n[2] rowoff_n[5] col[2] adc_sar_wafflecap_8_8
+x101 VDD ctop vcm row_n[5] rowon_n[5] net10 net9 VSS col_n[3] rowoff_n[5] col[3] adc_sar_wafflecap_8_8
+x102 VDD ctop vcm row_n[5] rowon_n[5] net10 net9 VSS col_n[4] rowoff_n[5] col[4] adc_sar_wafflecap_8_8
+x103 VDD ctop vcm row_n[5] rowon_n[5] net10 net9 VSS col_n[5] rowoff_n[5] col[5] adc_sar_wafflecap_8_8
+x104 VDD ctop vcm row_n[5] rowon_n[5] net10 net9 VSS col_n[6] rowoff_n[5] col[6] adc_sar_wafflecap_8_8
+x105 VDD ctop vcm row_n[5] rowon_n[5] net10 net9 VSS col_n[7] rowoff_n[5] col[7] adc_sar_wafflecap_8_8
+x106 VDD ctop vcm row_n[5] rowon_n[5] net10 net9 VSS col_n[8] rowoff_n[5] col[8] adc_sar_wafflecap_8_8
+x107 VDD ctop vcm row_n[5] rowon_n[5] net10 net9 VSS col_n[9] rowoff_n[5] col[9] adc_sar_wafflecap_8_8
+x108 VDD ctop vcm row_n[5] rowon_n[5] net10 net9 VSS col_n[10] rowoff_n[5] col[10] adc_sar_wafflecap_8_8
+x109 VDD ctop vcm row_n[5] rowon_n[5] net10 net9 VSS col_n[11] rowoff_n[5] col[11] adc_sar_wafflecap_8_8
+x110 VDD ctop vcm row_n[5] rowon_n[5] net10 net9 VSS col_n[12] rowoff_n[5] col[12] adc_sar_wafflecap_8_8
+x113 VDD ctop vcm row_n[6] rowon_n[6] sample_n sample VSS VDD net12 net11 rowoff_n[6] VSS adc_sar_wafflecap_drv
+x114 VDD ctop vcm row_n[6] rowon_n[6] net12 net11 VSS col_n[0] rowoff_n[6] col[0] adc_sar_wafflecap_8_8
+x115 VDD ctop vcm row_n[6] rowon_n[6] net12 net11 VSS col_n[1] rowoff_n[6] col[1] adc_sar_wafflecap_8_8
+x116 VDD ctop vcm row_n[6] rowon_n[6] net12 net11 VSS col_n[2] rowoff_n[6] col[2] adc_sar_wafflecap_8_8
+x117 VDD ctop vcm row_n[6] rowon_n[6] net12 net11 VSS col_n[3] rowoff_n[6] col[3] adc_sar_wafflecap_8_8
+x118 VDD ctop vcm row_n[6] rowon_n[6] net12 net11 VSS col_n[4] rowoff_n[6] col[4] adc_sar_wafflecap_8_8
+x119 VDD ctop vcm row_n[6] rowon_n[6] net12 net11 VSS col_n[5] rowoff_n[6] col[5] adc_sar_wafflecap_8_8
+x120 VDD ctop vcm row_n[6] rowon_n[6] net12 net11 VSS col_n[6] rowoff_n[6] col[6] adc_sar_wafflecap_8_8
+x121 VDD ctop vcm row_n[6] rowon_n[6] net12 net11 VSS col_n[7] rowoff_n[6] col[7] adc_sar_wafflecap_8_8
+x122 VDD ctop vcm row_n[6] rowon_n[6] net12 net11 VSS col_n[8] rowoff_n[6] col[8] adc_sar_wafflecap_8_8
+x123 VDD ctop vcm row_n[6] rowon_n[6] net12 net11 VSS col_n[9] rowoff_n[6] col[9] adc_sar_wafflecap_8_8
+x124 VDD ctop vcm row_n[6] rowon_n[6] net12 net11 VSS col_n[10] rowoff_n[6] col[10] adc_sar_wafflecap_8_8
+x125 VDD ctop vcm row_n[6] rowon_n[6] net12 net11 VSS col_n[11] rowoff_n[6] col[11] adc_sar_wafflecap_8_8
+x126 VDD ctop vcm row_n[6] rowon_n[6] net12 net11 VSS col_n[12] rowoff_n[6] col[12] adc_sar_wafflecap_8_8
+x129 VDD ctop vcm row_n[7] rowon_n[7] sample_n sample VSS VDD net14 net13 rowoff_n[7] VSS adc_sar_wafflecap_drv
+x130 VDD ctop vcm row_n[7] rowon_n[7] net14 net13 VSS col_n[0] rowoff_n[7] col[0] adc_sar_wafflecap_8_8
+x131 VDD ctop vcm row_n[7] rowon_n[7] net14 net13 VSS col_n[1] rowoff_n[7] col[1] adc_sar_wafflecap_8_8
+x132 VDD ctop vcm row_n[7] rowon_n[7] net14 net13 VSS col_n[2] rowoff_n[7] col[2] adc_sar_wafflecap_8_8
+x133 VDD ctop vcm row_n[7] rowon_n[7] net14 net13 VSS col_n[3] rowoff_n[7] col[3] adc_sar_wafflecap_8_8
+x134 VDD ctop vcm row_n[7] rowon_n[7] net14 net13 VSS col_n[4] rowoff_n[7] col[4] adc_sar_wafflecap_8_8
+x135 VDD ctop vcm row_n[7] rowon_n[7] net14 net13 VSS col_n[5] rowoff_n[7] col[5] adc_sar_wafflecap_8_8
+x136 VDD ctop vcm row_n[7] rowon_n[7] net14 net13 VSS col_n[6] rowoff_n[7] col[6] adc_sar_wafflecap_8_8
+x137 VDD ctop vcm row_n[7] rowon_n[7] net14 net13 VSS col_n[7] rowoff_n[7] col[7] adc_sar_wafflecap_8_8
+x138 VDD ctop vcm row_n[7] rowon_n[7] net14 net13 VSS col_n[8] rowoff_n[7] col[8] adc_sar_wafflecap_8_8
+x139 VDD ctop vcm row_n[7] rowon_n[7] net14 net13 VSS col_n[9] rowoff_n[7] col[9] adc_sar_wafflecap_8_8
+x140 VDD ctop vcm row_n[7] rowon_n[7] net14 net13 VSS col_n[10] rowoff_n[7] col[10] adc_sar_wafflecap_8_8
+x141 VDD ctop vcm row_n[7] rowon_n[7] net14 net13 VSS col_n[11] rowoff_n[7] col[11] adc_sar_wafflecap_8_8
+x142 VDD ctop vcm row_n[7] rowon_n[7] net14 net13 VSS col_n[12] rowoff_n[7] col[12] adc_sar_wafflecap_8_8
+x145 VDD ctop vcm row_n[8] rowon_n[8] sample_n sample VSS VDD net16 net15 rowoff_n[8] VSS adc_sar_wafflecap_drv
+x146 VDD ctop vcm row_n[8] rowon_n[8] net16 net15 VSS col_n[0] rowoff_n[8] col[0] adc_sar_wafflecap_8_8
+x147 VDD ctop vcm row_n[8] rowon_n[8] net16 net15 VSS col_n[1] rowoff_n[8] col[1] adc_sar_wafflecap_8_8
+x148 VDD ctop vcm row_n[8] rowon_n[8] net16 net15 VSS col_n[2] rowoff_n[8] col[2] adc_sar_wafflecap_8_8
+x149 VDD ctop vcm row_n[8] rowon_n[8] net16 net15 VSS col_n[3] rowoff_n[8] col[3] adc_sar_wafflecap_8_8
+x150 VDD ctop vcm row_n[8] rowon_n[8] net16 net15 VSS col_n[4] rowoff_n[8] col[4] adc_sar_wafflecap_8_8
+x151 VDD ctop vcm row_n[8] rowon_n[8] net16 net15 VSS col_n[5] rowoff_n[8] col[5] adc_sar_wafflecap_8_8
+x152 VDD ctop vcm row_n[8] rowon_n[8] net16 net15 VSS col_n[6] rowoff_n[8] col[6] adc_sar_wafflecap_8_8
+x153 VDD ctop vcm row_n[8] rowon_n[8] net16 net15 VSS col_n[7] rowoff_n[8] col[7] adc_sar_wafflecap_8_8
+x154 VDD ctop vcm row_n[8] rowon_n[8] net16 net15 VSS col_n[8] rowoff_n[8] col[8] adc_sar_wafflecap_8_8
+x155 VDD ctop vcm row_n[8] rowon_n[8] net16 net15 VSS col_n[9] rowoff_n[8] col[9] adc_sar_wafflecap_8_8
+x156 VDD ctop vcm row_n[8] rowon_n[8] net16 net15 VSS col_n[10] rowoff_n[8] col[10] adc_sar_wafflecap_8_8
+x157 VDD ctop vcm row_n[8] rowon_n[8] net16 net15 VSS col_n[11] rowoff_n[8] col[11] adc_sar_wafflecap_8_8
+x158 VDD ctop vcm row_n[8] rowon_n[8] net16 net15 VSS col_n[12] rowoff_n[8] col[12] adc_sar_wafflecap_8_8
+x161 VDD ctop vcm row_n[9] rowon_n[9] sample_n sample VSS VDD net18 net17 rowoff_n[9] VSS adc_sar_wafflecap_drv
+x162 VDD ctop vcm row_n[9] rowon_n[9] net18 net17 VSS col_n[0] rowoff_n[9] col[0] adc_sar_wafflecap_8_8
+x163 VDD ctop vcm row_n[9] rowon_n[9] net18 net17 VSS col_n[1] rowoff_n[9] col[1] adc_sar_wafflecap_8_8
+x164 VDD ctop vcm row_n[9] rowon_n[9] net18 net17 VSS col_n[2] rowoff_n[9] col[2] adc_sar_wafflecap_8_8
+x165 VDD ctop vcm row_n[9] rowon_n[9] net18 net17 VSS col_n[3] rowoff_n[9] col[3] adc_sar_wafflecap_8_8
+x166 VDD ctop vcm row_n[9] rowon_n[9] net18 net17 VSS col_n[4] rowoff_n[9] col[4] adc_sar_wafflecap_8_8
+x167 VDD ctop vcm row_n[9] rowon_n[9] net18 net17 VSS col_n[5] rowoff_n[9] col[5] adc_sar_wafflecap_8_8
+x168 VDD ctop vcm row_n[9] rowon_n[9] net18 net17 VSS col_n[6] rowoff_n[9] col[6] adc_sar_wafflecap_8_8
+x169 VDD ctop vcm row_n[9] rowon_n[9] net18 net17 VSS col_n[7] rowoff_n[9] col[7] adc_sar_wafflecap_8_8
+x170 VDD ctop vcm row_n[9] rowon_n[9] net18 net17 VSS col_n[8] rowoff_n[9] col[8] adc_sar_wafflecap_8_8
+x171 VDD ctop vcm row_n[9] rowon_n[9] net18 net17 VSS col_n[9] rowoff_n[9] col[9] adc_sar_wafflecap_8_8
+x172 VDD ctop vcm row_n[9] rowon_n[9] net18 net17 VSS col_n[10] rowoff_n[9] col[10] adc_sar_wafflecap_8_8
+x173 VDD ctop vcm row_n[9] rowon_n[9] net18 net17 VSS col_n[11] rowoff_n[9] col[11] adc_sar_wafflecap_8_8
+x174 VDD ctop vcm row_n[9] rowon_n[9] net18 net17 VSS col_n[12] rowoff_n[9] col[12] adc_sar_wafflecap_8_8
+x177 VDD ctop vcm VDD VDD sample_n sample VSS VDD net20 net19 VSS VSS adc_sar_wafflecap_drv
+x180 VDD ctop vcm VDD VDD net20 net19 VSS col_n[12] col[12] VSS adc_sar_wafflecap_dummy
+x181 VDD ctop vcm VDD VDD net20 net19 VSS col_n[11] col[11] VSS adc_sar_wafflecap_dummy
+x182 VDD ctop vcm VDD VDD net20 net19 VSS col_n[10] col[10] VSS adc_sar_wafflecap_dummy
+x183 VDD ctop vcm VDD VDD net20 net19 VSS col_n[9] col[9] VSS adc_sar_wafflecap_dummy
+x184 VDD ctop vcm VDD VDD net20 net19 VSS col_n[8] col[8] VSS adc_sar_wafflecap_dummy
+x185 VDD ctop vcm VDD VDD net20 net19 VSS col_n[7] col[7] VSS adc_sar_wafflecap_dummy
+x186 VDD ctop vcm VDD VDD net20 net19 VSS col_n[6] col[6] VSS adc_sar_wafflecap_dummy
+x187 VDD ctop vcm VDD VDD net20 net19 VSS col_n[5] col[5] VSS adc_sar_wafflecap_dummy
+x188 VDD ctop vcm VDD VDD net20 net19 VSS col_n[4] col[4] VSS adc_sar_wafflecap_dummy
+x189 VDD ctop vcm VDD VDD net20 net19 VSS col_n[3] col[3] VSS adc_sar_wafflecap_dummy
+x190 VDD ctop vcm VDD VDD net20 net19 VSS col_n[2] col[2] VSS adc_sar_wafflecap_dummy
+x191 VDD ctop vcm VDD VDD net20 net19 VSS col_n[1] col[1] VSS adc_sar_wafflecap_dummy
+x192 VDD ctop vcm VDD VDD net20 net19 VSS col_n[0] col[0] VSS adc_sar_wafflecap_dummy
+x14 VDD ctop vcm VDD VSS net24 net23 VSS col_n[12] sw analog_in sw_n col[12] VDD adc_sar_wafflecap_gate
+x15 VDD ctop vcm VDD VSS net24 net23 VSS VDD VSS VDD adc_sar_wafflecap_dummy
+x16 VDD ctop vcm row_n[1] rowon_n[1] net2 net1 VSS VDD VSS rowoff_n[1] adc_sar_wafflecap_dummy
+x32 VDD ctop vcm row_n[2] rowon_n[2] net4 net3 VSS VDD VSS rowoff_n[2] adc_sar_wafflecap_dummy
+x47 VDD ctop vcm row_n[3] rowon_n[3] net6 net5 VSS VDD VSS rowoff_n[3] adc_sar_wafflecap_dummy
+x48 VDD ctop vcm row_n[4] rowon_n[4] net8 net7 VSS VDD VSS rowoff_n[4] adc_sar_wafflecap_dummy
+x63 VDD ctop vcm row_n[5] rowon_n[5] net10 net9 VSS VDD VSS rowoff_n[5] adc_sar_wafflecap_dummy
+x64 VDD ctop vcm row_n[6] rowon_n[6] net12 net11 VSS VDD VSS rowoff_n[6] adc_sar_wafflecap_dummy
+x79 VDD ctop vcm row_n[7] rowon_n[7] net14 net13 VSS VDD VSS rowoff_n[7] adc_sar_wafflecap_dummy
+x80 VDD ctop vcm row_n[8] rowon_n[8] net16 net15 VSS VDD VSS rowoff_n[8] adc_sar_wafflecap_dummy
+x95 VDD ctop vcm row_n[9] rowon_n[9] net18 net17 VSS VDD VSS rowoff_n[9] adc_sar_wafflecap_dummy
+x96 VDD ctop vcm VDD VDD net20 net19 VSS VDD VSS VSS adc_sar_wafflecap_dummy
+**.ends
+
+* expanding   symbol:  adc_sar_wafflecap_drv.sym # of pins=13
+** sym_path: /home/tien/gf180ex/adc_sar_wafflecap_drv.sym
+** sch_path: /home/tien/gf180ex/adc_sar_wafflecap_drv.sch
+.subckt adc_sar_wafflecap_drv VDD ctop vcom row_n rowon_n sample_n_i sample_i VSS col_n sample_n_o sample_o rowoff_n col
+*.ipin sample_n_i
+*.ipin sample_i
+*.iopin vcom
+*.iopin VDD
+*.iopin ctop
+*.iopin VSS
+*.opin sample_n_o
+*.opin sample_o
+*.ipin row_n
+*.ipin col_n
+*.ipin rowon_n
+*.ipin rowoff_n
+*.ipin col
+* noconn ctop
+x1 VDD col_n row_n rowon_n sample_n_i vcom sample_i VSS sample_n_o sample_o rowoff_n col adc_sar_array_circuit_drv
+.ends
+
+
+* expanding   symbol:  adc_sar_wafflecap_dummy.sym # of pins=11
+** sym_path: /home/tien/gf180ex/adc_sar_wafflecap_dummy.sym
+** sch_path: /home/tien/gf180ex/adc_sar_wafflecap_dummy.sch
+.subckt adc_sar_wafflecap_dummy VDD ctop vcom row_n rowon_n sample_n sample VSS col_n col rowoff_n
+*.iopin vcom
+*.iopin VDD
+*.iopin ctop
+*.iopin VSS
+*.ipin row_n
+*.ipin col_n
+*.ipin rowon_n
+*.ipin sample_n
+*.ipin sample
+*.ipin rowoff_n
+*.ipin col
+* noconn ctop
+x1 VDD col_n cbot row_n rowon_n sample_n vcom sample VSS rowoff_n col adc_sar_array_circuit_8
+.ends
+
+
+* expanding   symbol:  adc_sar_wafflecap_8_1.sym # of pins=12
+** sym_path: /home/tien/gf180ex/adc_sar_wafflecap_8_1.sym
+** sch_path: /home/tien/gf180ex/adc_sar_wafflecap_8_1.sch
+.subckt adc_sar_wafflecap_8_1 VDD ctop vcom row_n rowon_n sample_n sample VSS col_n en_n rowoff_n col
+*.iopin vcom
+*.iopin VDD
+*.iopin ctop
+*.iopin VSS
+*.ipin en_n
+*.ipin row_n
+*.ipin col_n
+*.ipin rowon_n
+*.ipin sample_n
+*.ipin sample
+*.ipin rowoff_n
+*.ipin col
+x1 VDD col_n cbot row_n rowon_n sample_n vcom sample VSS en_n rowoff_n col adc_sar_array_circuit_1
+XC1 ctop cbot cap_mim_1f5fF c_width=0.6e-6 c_length=0.5e-6 m=1
+.ends
+
+
+* expanding   symbol:  adc_sar_wafflecap_8_2.sym # of pins=12
+** sym_path: /home/tien/gf180ex/adc_sar_wafflecap_8_2.sym
+** sch_path: /home/tien/gf180ex/adc_sar_wafflecap_8_2.sch
+.subckt adc_sar_wafflecap_8_2 VDD ctop vcom row_n rowon_n sample_n sample VSS col_n en_n rowoff_n col
+*.iopin vcom
+*.iopin VDD
+*.iopin ctop
+*.iopin VSS
+*.ipin en_n
+*.ipin row_n
+*.ipin col_n
+*.ipin rowon_n
+*.ipin sample_n
+*.ipin sample
+*.ipin col
+*.ipin rowoff_n
+x1 VDD col_n cbot row_n rowon_n sample_n vcom sample VSS en_n rowoff_n col adc_sar_array_circuit_2
+XC1 ctop cbot cap_mim_1f5fF c_width=0.6e-6 c_length=0.5e-6 m=1
+XC2 ctop cbot cap_mim_1f5fF c_width=0.6e-6 c_length=0.5e-6 m=1
+.ends
+
+
+* expanding   symbol:  adc_sar_wafflecap_8_4.sym # of pins=12
+** sym_path: /home/tien/gf180ex/adc_sar_wafflecap_8_4.sym
+** sch_path: /home/tien/gf180ex/adc_sar_wafflecap_8_4.sch
+.subckt adc_sar_wafflecap_8_4 VDD ctop vcom row_n rowon_n sample_n sample VSS col_n en_n rowoff_n col
+*.iopin vcom
+*.iopin VDD
+*.iopin ctop
+*.iopin VSS
+*.ipin en_n
+*.ipin row_n
+*.ipin col_n
+*.ipin rowon_n
+*.ipin sample_n
+*.ipin sample
+*.ipin rowoff_n
+*.ipin col
+x1 VDD col_n cbot row_n rowon_n sample_n vcom sample VSS en_n rowoff_n col adc_sar_array_circuit_4
+XC1 ctop cbot cap_mim_1f5fF c_width=0.6e-6 c_length=0.5e-6 m=1
+XC2 ctop cbot cap_mim_1f5fF c_width=0.6e-6 c_length=0.5e-6 m=1
+XC3 ctop cbot cap_mim_1f5fF c_width=0.6e-6 c_length=0.5e-6 m=1
+XC4 ctop cbot cap_mim_1f5fF c_width=0.6e-6 c_length=0.5e-6 m=1
+.ends
+
+
+* expanding   symbol:  adc_sar_wafflecap_8_8.sym # of pins=11
+** sym_path: /home/tien/gf180ex/adc_sar_wafflecap_8_8.sym
+** sch_path: /home/tien/gf180ex/adc_sar_wafflecap_8_8.sch
+.subckt adc_sar_wafflecap_8_8 VDD ctop vcom row_n rowon_n sample_n sample VSS col_n rowoff_n col
+*.iopin vcom
+*.iopin VDD
+*.iopin ctop
+*.iopin VSS
+*.ipin row_n
+*.ipin col_n
+*.ipin rowon_n
+*.ipin sample_n
+*.ipin sample
+*.ipin rowoff_n
+*.ipin col
+x1 VDD col_n cbot row_n rowon_n sample_n vcom sample VSS rowoff_n col adc_sar_array_circuit_8
+XC1 ctop cbot cap_mim_1f5fF c_width=0.6e-6 c_length=0.5e-6 m=1
+XC2 ctop cbot cap_mim_1f5fF c_width=0.6e-6 c_length=0.5e-6 m=1
+XC3 ctop cbot cap_mim_1f5fF c_width=0.6e-6 c_length=0.5e-6 m=1
+XC4 ctop cbot cap_mim_1f5fF c_width=0.6e-6 c_length=0.5e-6 m=1
+XC5 ctop cbot cap_mim_1f5fF c_width=0.6e-6 c_length=0.5e-6 m=1
+XC6 ctop cbot cap_mim_1f5fF c_width=0.6e-6 c_length=0.5e-6 m=1
+XC7 ctop cbot cap_mim_1f5fF c_width=0.6e-6 c_length=0.5e-6 m=1
+XC8 ctop cbot cap_mim_1f5fF c_width=0.6e-6 c_length=0.5e-6 m=1
+.ends
+
+
+* expanding   symbol:  adc_sar_wafflecap_gate.sym # of pins=14
+** sym_path: /home/tien/gf180ex/adc_sar_wafflecap_gate.sym
+** sch_path: /home/tien/gf180ex/adc_sar_wafflecap_gate.sch
+.subckt adc_sar_wafflecap_gate VDD ctop vcom row_n rowon_n sample_n sample VSS col_n sw in sw_n col rowoff_n
+*.iopin vcom
+*.iopin VDD
+*.iopin ctop
+*.iopin VSS
+*.ipin row_n
+*.ipin col_n
+*.ipin rowon_n
+*.ipin sample_n
+*.ipin sample
+*.iopin in
+*.ipin sw
+*.ipin sw_n
+*.ipin rowoff_n
+*.ipin col
+x1 VDD col_n row_n rowon_n sample_n vcom sample VSS ctop in sw_n sw rowoff_n col adc_sar_array_gate
+.ends
+
+
+* expanding   symbol:  adc_sar_array_circuit_drv.sym # of pins=12
+** sym_path: /home/tien/gf180ex/adc_sar_array_circuit_drv.sym
+** sch_path: /home/tien/gf180ex/adc_sar_array_circuit_drv.sch
+.subckt adc_sar_array_circuit_drv VDD col_n row_n rowon_n sample_n_i vcom sample_i VSS sample_n_o sample_o rowoff_n col
+*.ipin sample_n_i
+*.ipin sample_i
+*.iopin vcom
+*.ipin row_n
+*.ipin col_n
+*.ipin rowon_n
+*.iopin VDD
+*.iopin VSS
+*.opin sample_o
+*.opin sample_n_o
+*.ipin rowoff_n
+*.ipin col
+* noconn row_n
+* noconn col_n
+* noconn rowon_n
+* noconn vcom
+* noconn rowoff_n
+* noconn col
+* noconn sample_n_i
+XM1 net2 VDD sample_i VSS nfet_03v3 L=0.28u W=0.6u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM2 sample_n_o net2 VDD VDD pfet_03v3 L=0.28u W=1.2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM3 sample_n_o net2 VSS VSS nfet_03v3 L=0.28u W=0.6u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM4 net2 VSS sample_i VDD pfet_03v3 L=0.28u W=1.2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM5 net1 sample_i VDD VDD pfet_03v3 L=0.28u W=1.2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM6 sample_o net1 VDD VDD pfet_03v3 L=0.28u W=1.2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM7 net1 sample_i VSS VSS nfet_03v3 L=0.28u W=0.6u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM8 sample_o net1 VSS VSS nfet_03v3 L=0.28u W=0.6u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+.ends
+
+
+* expanding   symbol:  adc_sar_array_circuit_8.sym # of pins=11
+** sym_path: /home/tien/gf180ex/adc_sar_array_circuit_8.sym
+** sch_path: /home/tien/gf180ex/adc_sar_array_circuit_8.sch
+.subckt adc_sar_array_circuit_8 VDD col_n Cbot row_n rowon_n sample_n vcom sample VSS rowoff_n col
+*.ipin sample_n
+*.ipin sample
+*.iopin vcom
+*.ipin col_n
+*.ipin row_n
+*.ipin rowon_n
+*.iopin VDD
+*.iopin VSS
+*.iopin Cbot
+*.ipin col
+*.ipin rowoff_n
+* noconn col
+* noconn rowoff_n
+XM1 vdrv sample_n Cbot VSS nfet_03v3 L=0.28u W=0.42u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM2 vcom sample_n Cbot VDD pfet_03v3 L=0.28u W=0.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM3 vdrv sample Cbot VDD pfet_03v3 L=0.28u W=0.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM4 vcom sample Cbot VSS nfet_03v3 L=0.28u W=0.42u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM5 VDD col_n vint1 VDD pfet_03v3 L=0.28u W=0.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM6 vint1 row_n vdrv VDD pfet_03v3 L=0.28u W=0.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM7 VDD rowon_n vdrv VDD pfet_03v3 L=0.28u W=0.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM8 vint2 rowon_n vdrv VSS nfet_03v3 L=0.28u W=0.42u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM9 VSS col_n vint2 VSS nfet_03v3 L=0.28u W=0.42u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM10 VSS row_n vint2 VSS nfet_03v3 L=0.28u W=0.42u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+.ends
+
+
+* expanding   symbol:  adc_sar_array_circuit_1.sym # of pins=12
+** sym_path: /home/tien/gf180ex/adc_sar_array_circuit_1.sym
+** sch_path: /home/tien/gf180ex/adc_sar_array_circuit_1.sch
+.subckt adc_sar_array_circuit_1 VDD col_n Cbot row_n rowon_n sample_n vcom sample VSS en_n rowoff_n col
+*.ipin sample_n
+*.ipin sample
+*.iopin vcom
+*.ipin row_n
+*.ipin col_n
+*.ipin rowon_n
+*.iopin VDD
+*.iopin VSS
+*.iopin Cbot
+*.ipin en_n
+*.ipin rowoff_n
+*.ipin col
+* noconn row_n
+* noconn col_n
+* noconn rowon_n
+* noconn rowoff_n
+* noconn col
+XM1 vcom sample_n Cbot VDD pfet_03v3 L=0.28u W=0.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM2 vdrv sample_n Cbot VSS nfet_03v3 L=0.28u W=0.42u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM3 vdrv sample Cbot VDD pfet_03v3 L=0.28u W=0.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM4 vcom sample Cbot VSS nfet_03v3 L=0.28u W=0.42u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM5 VDD en_n vint1 VDD pfet_03v3 L=0.28u W=0.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM6 vint1 en_n vdrv VDD pfet_03v3 L=0.28u W=0.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM7 VDD en_n vdrv VDD pfet_03v3 L=0.28u W=0.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM8 vint2 en_n vdrv VSS nfet_03v3 L=0.28u W=0.42u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM9 VSS en_n vint2 VSS nfet_03v3 L=0.28u W=0.42u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM10 VSS en_n vint2 VSS nfet_03v3 L=0.28u W=0.42u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+.ends
+
+
+* expanding   symbol:  adc_sar_array_circuit_2.sym # of pins=12
+** sym_path: /home/tien/gf180ex/adc_sar_array_circuit_2.sym
+** sch_path: /home/tien/gf180ex/adc_sar_array_circuit_2.sch
+.subckt adc_sar_array_circuit_2 VDD col_n Cbot row_n rowon_n sample_n vcom sample VSS en_n rowoff_n col
+*.ipin sample_n
+*.ipin sample
+*.iopin vcom
+*.ipin row_n
+*.ipin col_n
+*.ipin rowon_n
+*.iopin VDD
+*.iopin VSS
+*.iopin Cbot
+*.ipin en_n
+*.ipin rowoff_n
+*.ipin col
+* noconn row_n
+* noconn col_n
+* noconn rowon_n
+* noconn rowoff_n
+* noconn col
+XM1 vcom sample_n Cbot VDD pfet_03v3 L=0.28u W=0.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM2 vdrv sample_n Cbot VSS nfet_03v3 L=0.28u W=0.42u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM3 vdrv sample Cbot VDD pfet_03v3 L=0.28u W=0.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM4 vcom sample Cbot VSS nfet_03v3 L=0.28u W=0.42u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM5 VDD en_n vint1 VDD pfet_03v3 L=0.28u W=0.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM6 vint1 en_n vdrv VDD pfet_03v3 L=0.28u W=0.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM7 VDD en_n vdrv VDD pfet_03v3 L=0.28u W=0.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM8 vint2 en_n vdrv VSS nfet_03v3 L=0.28u W=0.42u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM9 VSS en_n vint2 VSS nfet_03v3 L=0.28u W=0.42u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM10 VSS en_n vint2 VSS nfet_03v3 L=0.28u W=0.42u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+.ends
+
+
+* expanding   symbol:  adc_sar_array_circuit_4.sym # of pins=12
+** sym_path: /home/tien/gf180ex/adc_sar_array_circuit_4.sym
+** sch_path: /home/tien/gf180ex/adc_sar_array_circuit_4.sch
+.subckt adc_sar_array_circuit_4 VDD col_n Cbot row_n rowon_n sample_n vcom sample VSS en_n rowoff_n col
+*.ipin sample_n
+*.ipin sample
+*.iopin vcom
+*.ipin row_n
+*.ipin col_n
+*.ipin rowon_n
+*.iopin VDD
+*.iopin VSS
+*.iopin Cbot
+*.ipin en_n
+*.ipin rowoff_n
+*.ipin col
+* noconn row_n
+* noconn col_n
+* noconn rowon_n
+* noconn rowoff_n
+* noconn col
+XM1 vcom sample_n Cbot VDD pfet_03v3 L=0.28u W=0.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM2 vdrv sample_n Cbot VSS nfet_03v3 L=0.28u W=0.42u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM3 vdrv sample Cbot VDD pfet_03v3 L=0.28u W=0.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM4 vcom sample Cbot VSS nfet_03v3 L=0.28u W=0.42u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM5 VDD en_n vint1 VDD pfet_03v3 L=0.28u W=0.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM6 vint1 en_n vdrv VDD pfet_03v3 L=0.28u W=0.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM7 VDD en_n vdrv VDD pfet_03v3 L=0.28u W=0.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM8 vint2 en_n vdrv VSS nfet_03v3 L=0.28u W=0.42u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM9 VSS en_n vint2 VSS nfet_03v3 L=0.28u W=0.42u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM10 VSS en_n vint2 VSS nfet_03v3 L=0.28u W=0.42u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+.ends
+
+
+* expanding   symbol:  adc_sar_array_gate.sym # of pins=14
+** sym_path: /home/tien/gf180ex/adc_sar_array_gate.sym
+** sch_path: /home/tien/gf180ex/adc_sar_array_gate.sch
+.subckt adc_sar_array_gate VDD col_n row_n rowon_n sample_n vcom sample VSS out in sw_n sw rowoff_n col
+*.ipin sw
+*.ipin sw_n
+*.iopin vcom
+*.ipin row_n
+*.ipin col_n
+*.ipin rowon_n
+*.iopin VDD
+*.iopin VSS
+*.ipin sample
+*.ipin sample_n
+*.iopin in
+*.iopin out
+*.ipin col
+*.ipin rowoff_n
+* noconn row_n
+* noconn col_n
+* noconn rowon_n
+* noconn vcom
+* noconn sample
+* noconn sample_n
+* noconn col
+* noconn rowoff_n
+x1 sw_n in sw out VDD VSS adc_sar_switch_gate
+.ends
+
+
+* expanding   symbol:  adc_sar_switch_gate.sym # of pins=6
+** sym_path: /home/tien/gf180ex/adc_sar_switch_gate.sym
+** sch_path: /home/tien/gf180ex/adc_sar_switch_gate.sch
+.subckt adc_sar_switch_gate sw_n a sw b VDD VSS
+*.iopin VSS
+*.iopin VDD
+*.ipin sw_n
+*.ipin sw
+*.iopin a
+*.iopin b
+XM1 b sw_n b VSS nfet_03v3 L=0.28u W=3.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM2 a sw b VSS nfet_03v3 L=0.28u W=7.6u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM3 b sw b VDD pfet_03v3 L=0.28u W=3.8u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM4 a sw_n b VDD pfet_03v3 L=0.28u W=7.6u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+.ends
+
+.end

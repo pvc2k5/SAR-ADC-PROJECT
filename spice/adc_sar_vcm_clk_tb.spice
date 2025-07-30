@@ -1,0 +1,119 @@
+** sch_path: /home/tien/gf180ex/adc_sar_vcm_clk_tb.sch
+**.subckt adc_sar_vcm_clk_tb
+x1 VDD GND phi1_n phi1 phi2 phi2_n Clock adc_sar_vcm_clk
+V1 VDD GND 3.3
+V2 Clock GND pulse(0 3.3 10p 10p 10p 10n 20n)
+**** begin user architecture code
+
+
+.tran 0.1n 36n
+.save all
+
+
+
+.include /home/tien/conda-gf180mcu-env/envs/gf180mcu-env/share/pdk/gf180mcuC/libs.tech/ngspice/design.ngspice
+.lib /home/tien/conda-gf180mcu-env/envs/gf180mcu-env/share/pdk/gf180mcuC/libs.tech/ngspice/smbb000149.ngspice typical
+.lib /home/tien/conda-gf180mcu-env/envs/gf180mcu-env/share/pdk/gf180mcuC/libs.tech/ngspice/sm141064.ngspice cap_mim
+.lib /home/tien/conda-gf180mcu-env/envs/gf180mcu-env/share/pdk/gf180mcuC/libs.tech/ngspice/sm141064.ngspice mimcap_typical
+.lib /home/tien/conda-gf180mcu-env/envs/gf180mcu-env/share/pdk/gf180mcuC/libs.tech/ngspice/sm141064.ngspice res_typical
+.lib /home/tien/conda-gf180mcu-env/envs/gf180mcu-env/share/pdk/gf180mcuC/libs.tech/ngspice/sm141064.ngspice moscap_typical
+.lib /home/tien/conda-gf180mcu-env/envs/gf180mcu-env/share/pdk/gf180mcuC/libs.tech/ngspice/sm141064.ngspice diode_typical
+.lib /home/tien/conda-gf180mcu-env/envs/gf180mcu-env/share/pdk/gf180mcuC/libs.tech/ngspice/sm141064.ngspice typical
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  adc_sar_vcm_clk.sym # of pins=7
+** sym_path: /home/tien/gf180ex/adc_sar_vcm_clk.sym
+** sch_path: /home/tien/gf180ex/adc_sar_vcm_clk.sch
+.subckt adc_sar_vcm_clk VDD VSS phi1_n phi1 phi2 phi2_n clk
+*.iopin VSS
+*.iopin VDD
+*.ipin clk
+*.opin phi1
+*.opin phi1_n
+*.opin phi2
+*.opin phi2_n
+x1 VDD clk net17 net2 nand_gate
+x2 VDD net16 net1 net3 nand_gate
+x3 VDD VSS clk net1 adc_sar_inverter
+x4 VDD VSS net2 net5 adc_sar_comp_buffer
+x5 VDD VSS net3 net6 adc_sar_comp_buffer
+XC1 net4 VSS cap_mim_1f0fF c_width=10e-6 c_length=50e-6 m=1
+XR1 net5 net4 rm1 r_width=0.6e-6 r_length=17.4e-6 m=1
+XC2 net7 VSS cap_mim_1f0fF c_width=10e-6 c_length=50e-6 m=1
+XR2 net6 net7 rm1 r_width=0.6e-6 r_length=17.4e-6 m=1
+x6 VDD VSS net4 net11 adc_sar_comp_buffer
+x7 VDD VSS net7 net10 adc_sar_comp_buffer
+XC3 net8 VSS cap_mim_1f0fF c_width=10e-6 c_length=50e-6 m=1
+XR3 net11 net8 rm1 r_width=0.6e-6 r_length=17.4e-6 m=1
+XC4 net9 VSS cap_mim_1f0fF c_width=10e-6 c_length=50e-6 m=1
+XR4 net10 net9 rm1 r_width=0.6e-6 r_length=17.4e-6 m=1
+x8 VDD VSS net8 net12 adc_sar_comp_buffer
+x9 VDD VSS net9 net13 adc_sar_comp_buffer
+x10 VDD VSS net12 net14 adc_sar_inverter
+x11 VDD VSS net13 net15 adc_sar_inverter
+x12 VDD VSS net14 net16 adc_sar_inverter
+x13 VDD VSS net15 net17 adc_sar_inverter
+x14 VDD VSS net16 phi1_n adc_sar_comp_buffer
+x15 VDD VSS net17 phi2 adc_sar_comp_buffer
+x16 VDD VSS net14 phi1 adc_sar_comp_buffer
+x17 VDD VSS net15 phi2_n adc_sar_comp_buffer
+.ends
+
+
+* expanding   symbol:  nand_gate.sym # of pins=4
+** sym_path: /home/tien/gf180ex/nand_gate.sym
+** sch_path: /home/tien/gf180ex/nand_gate.sch
+.subckt nand_gate VP A B Y
+*.ipin A
+*.ipin B
+*.opin Y
+*.iopin VP
+XM1 Y B net1 GND nfet_03v3 L=0.28u W=0.22u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM2 Y A VP VP pfet_03v3 L=0.28u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM4 net1 A GND GND nfet_03v3 L=0.28u W=0.22u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM3 Y B VP VP pfet_03v3 L=0.28u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+.ends
+
+
+* expanding   symbol:  adc_sar_inverter.sym # of pins=4
+** sym_path: /home/tien/gf180ex/adc_sar_inverter.sym
+** sch_path: /home/tien/gf180ex/adc_sar_inverter.sch
+.subckt adc_sar_inverter VDD VSS in out
+*.iopin VDD
+*.iopin VSS
+*.ipin in
+*.opin out
+XM1 out in VSS VSS nfet_03v3 L=0.28u W=0.42u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM2 out in VDD VDD pfet_03v3 L=0.28u W=0.84u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+.ends
+
+
+* expanding   symbol:  adc_sar_comp_buffer.sym # of pins=4
+** sym_path: /home/tien/gf180ex/adc_sar_comp_buffer.sym
+** sch_path: /home/tien/gf180ex/adc_sar_comp_buffer.sch
+.subckt adc_sar_comp_buffer VDD VSS in out
+*.iopin VDD
+*.iopin VSS
+*.ipin in
+*.opin out
+XM1 buf_mid in VSS VSS nfet_03v3 L=0.28u W=0.5u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM2 out buf_mid VSS VSS nfet_03v3 L=0.28u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM3 buf_mid in VDD VDD pfet_03v3 L=0.28u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM4 out buf_mid VDD VDD pfet_03v3 L=0.28u W=2u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+.ends
+
+.GLOBAL GND
+.GLOBAL VDD
+.end

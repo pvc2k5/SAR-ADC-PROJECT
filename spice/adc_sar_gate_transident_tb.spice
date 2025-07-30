@@ -1,0 +1,62 @@
+** sch_path: /home/tien/gf180ex/adc_sar_gate_transident_tb.sch
+**.subckt adc_sar_gate_transident_tb
+V3 nsample GND PULSE(0 3.3 0 30n 30n 50n 100n)
+V4 VDD GND 3.3
+V6 in GND SIN(0.9 0.9 10Meg)
+C1 out GND 15f m=1
+x1 nsample in sample out VDD GND adc_sar_vcm_switch
+x2 VDD GND nsample sample adc_sar_inverter
+**** begin user architecture code
+
+
+.tran 0.1u 2u
+.save all
+
+
+
+.include /home/tien/conda-gf180mcu-env/envs/gf180mcu-env/share/pdk/gf180mcuC/libs.tech/ngspice/design.ngspice
+.lib /home/tien/conda-gf180mcu-env/envs/gf180mcu-env/share/pdk/gf180mcuC/libs.tech/ngspice/smbb000149.ngspice typical
+.lib /home/tien/conda-gf180mcu-env/envs/gf180mcu-env/share/pdk/gf180mcuC/libs.tech/ngspice/sm141064.ngspice cap_mim
+.lib /home/tien/conda-gf180mcu-env/envs/gf180mcu-env/share/pdk/gf180mcuC/libs.tech/ngspice/sm141064.ngspice mimcap_typical
+.lib /home/tien/conda-gf180mcu-env/envs/gf180mcu-env/share/pdk/gf180mcuC/libs.tech/ngspice/sm141064.ngspice res_typical
+.lib /home/tien/conda-gf180mcu-env/envs/gf180mcu-env/share/pdk/gf180mcuC/libs.tech/ngspice/sm141064.ngspice moscap_typical
+.lib /home/tien/conda-gf180mcu-env/envs/gf180mcu-env/share/pdk/gf180mcuC/libs.tech/ngspice/sm141064.ngspice diode_typical
+.lib /home/tien/conda-gf180mcu-env/envs/gf180mcu-env/share/pdk/gf180mcuC/libs.tech/ngspice/sm141064.ngspice typical
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  adc_sar_vcm_switch.sym # of pins=6
+** sym_path: /home/tien/gf180ex/adc_sar_vcm_switch.sym
+** sch_path: /home/tien/gf180ex/adc_sar_vcm_switch.sch
+.subckt adc_sar_vcm_switch sw_n a sw b VDD VSS
+*.iopin VSS
+*.iopin VDD
+*.ipin sw_n
+*.ipin sw
+*.iopin a
+*.iopin b
+XM1 a sw b VSS nfet_03v3 L=0.5u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM2 a sw_n b VDD pfet_03v3 L=0.5u W=1u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+.ends
+
+
+* expanding   symbol:  adc_sar_inverter.sym # of pins=4
+** sym_path: /home/tien/gf180ex/adc_sar_inverter.sym
+** sch_path: /home/tien/gf180ex/adc_sar_inverter.sch
+.subckt adc_sar_inverter VDD VSS in out
+*.iopin VDD
+*.iopin VSS
+*.ipin in
+*.opin out
+XM1 out in VSS VSS nfet_03v3 L=0.28u W=0.42u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+XM2 out in VDD VDD pfet_03v3 L=0.28u W=0.84u nf=1 ad='int((nf+1)/2) * W/nf * 0.18u' as='int((nf+2)/2) * W/nf * 0.18u' pd='2*int((nf+1)/2) * (W/nf + 0.18u)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.18u)' nrd='0.18u / W' nrs='0.18u / W' sa=0 sb=0 sd=0 m=1
+.ends
+
+.GLOBAL GND
+.GLOBAL VDD
+.end
