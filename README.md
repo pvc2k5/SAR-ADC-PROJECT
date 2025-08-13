@@ -4,7 +4,6 @@ The final GDS layout file is located in:
 ```bash
 openroad/results/gf180/sar/base/6_final.gds
 ```
-This file represents the completed physical layout after the entire digital implementation flow.
 
 # Reports
 The openroad/reports directory contains reports generated at different stages of the digital implementation process, including:
