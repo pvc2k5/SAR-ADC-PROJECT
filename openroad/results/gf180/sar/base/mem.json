@@ -1,0 +1,5319 @@
+{
+  "creator": "Yosys 0.55+115 (git sha1 8f6d7a304, x86_64-conda-linux-gnu-c++ 11.2.0 -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -fdebug-prefix-map=/home/runner/work/conda-opensource-eda/conda-opensource-eda/workdir/conda-env/conda-bld/yosys_1753769274425/work=/usr/local/src/conda/yosys-0.55_116_g8f6d7a304 -fdebug-prefix-map=/home/pvc/eda-env=/usr/local/src/conda-prefix -fPIC -O3)",
+  "modules": {
+    "adc_core_digital": {
+      "attributes": {
+        "src": "/home/pvc/sar/RTL/adc_core_digital.v:20.1-145.10",
+        "top": "00000000000000000000000000000001",
+        "hdlname": "adc_core_digital"
+      },
+      "ports": {
+        "a_rst_n": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "a_config_1_in": {
+          "direction": "input",
+          "bits": [ 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ]
+        },
+        "a_config_2_in": {
+          "direction": "input",
+          "bits": [ 13, 14, 15, 16, 17, 18, 19, 20, 21, 22 ]
+        },
+        "a_comparator_in": {
+          "direction": "input",
+          "bits": [ 23 ]
+        },
+        "a_clk_dig_in": {
+          "direction": "input",
+          "bits": [ 24 ]
+        },
+        "a_result_out": {
+          "direction": "output",
+          "bits": [ 25, 26, 27, 28, 29, 30, 31, 32, 33, 34 ]
+        },
+        "a_conv_finished_osr_out": {
+          "direction": "output",
+          "bits": [ 35 ]
+        },
+        "a_enable_loop_out": {
+          "direction": "output",
+          "bits": [ 36 ]
+        },
+        "a_sample_matrix_out": {
+          "direction": "output",
+          "bits": [ 37 ]
+        },
+        "a_sample_matrix_out_n": {
+          "direction": "output",
+          "bits": [ 36 ]
+        },
+        "a_sample_switch_out": {
+          "direction": "output",
+          "bits": [ 37 ]
+        },
+        "a_sample_switch_out_n": {
+          "direction": "output",
+          "bits": [ 36 ]
+        },
+        "a_pmatrix_row_out_n": {
+          "direction": "output",
+          "bits": [ 38, 39, 40, 41, 42, 43, 44, 45, 46, 47 ]
+        },
+        "a_pmatrix_rowon_out_n": {
+          "direction": "output",
+          "bits": [ 48, 49, 50, 51, 52, 53, 54, 55, 56, 57 ]
+        },
+        "a_pmatrix_rowoff_out_n": {
+          "direction": "output",
+          "bits": [ 58, 59, 60, 61, 62, 63, 64, 65, 66, 67 ]
+        },
+        "a_pmatrix_col_out_n": {
+          "direction": "output",
+          "bits": [ 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80 ]
+        },
+        "a_pmatrix_col_out": {
+          "direction": "output",
+          "bits": [ 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93 ]
+        },
+        "a_pmatrix_bincap_out_n": {
+          "direction": "output",
+          "bits": [ 94, 95, 96 ]
+        },
+        "a_pmatrix_c0_out_n": {
+          "direction": "output",
+          "bits": [ "0" ]
+        },
+        "a_nmatrix_row_out_n": {
+          "direction": "output",
+          "bits": [ 97, 98, 99, 100, 101, 102, 103, 104, 105, 106 ]
+        },
+        "a_nmatrix_rowon_out_n": {
+          "direction": "output",
+          "bits": [ 107, 108, 109, 110, 111, 112, 113, 114, 115, 116 ]
+        },
+        "a_nmatrix_rowoff_out_n": {
+          "direction": "output",
+          "bits": [ 117, 118, 119, 120, 121, 122, 123, 124, 125, 126 ]
+        },
+        "a_nmatrix_col_out_n": {
+          "direction": "output",
+          "bits": [ 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139 ]
+        },
+        "a_nmatrix_col_out": {
+          "direction": "output",
+          "bits": [ 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152 ]
+        },
+        "a_nmatrix_bincap_out_n": {
+          "direction": "output",
+          "bits": [ 153, 154, 155 ]
+        },
+        "a_nmatrix_c0_out_n": {
+          "direction": "output",
+          "bits": [ "1" ]
+        }
+      },
+      "cells": {
+        "$auto$alumacc.cc:495:replace_alu$2664": {
+          "hide_name": 1,
+          "type": "$alu",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000101",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000101",
+            "Y_WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:51.44-51.85"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "BI": "input",
+            "CI": "input",
+            "CO": "output",
+            "X": "output",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 156, 157, 158, 159, 160 ],
+            "B": [ 161, 162, 163, 164, 165 ],
+            "BI": [ "1" ],
+            "CI": [ "1" ],
+            "CO": [ 166, 167, 168, 169, 170 ],
+            "X": [ 171, 172, 173, 174, 175 ],
+            "Y": [ 176, 177, 178, 179, 180 ]
+          }
+        },
+        "$auto$alumacc.cc:495:replace_alu$2669": {
+          "hide_name": 1,
+          "type": "$alu",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000001010",
+            "Y_WIDTH": "00000000000000000000000000001010"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:120.38-120.73"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "BI": "input",
+            "CI": "input",
+            "CO": "output",
+            "X": "output",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 181, 182, 183, 184, 185, 186, 187, 188 ],
+            "B": [ 189, 190, 191, 192, 193, 194, 195, 196, 197, 198 ],
+            "BI": [ "0" ],
+            "CI": [ "0" ],
+            "CO": [ 199, 200, 201, 202, 203, 204, 205, 206, 207, 208 ],
+            "X": [ 209, 210, 211, 212, 213, 214, 215, 216, 217, 218 ],
+            "Y": [ 219, 220, 221, 222, 223, 224, 225, 226, 227, 228 ]
+          }
+        },
+        "$auto$alumacc.cc:495:replace_alu$2672": {
+          "hide_name": 1,
+          "type": "$alu",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000101",
+            "Y_WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:133.53-133.74"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "BI": "input",
+            "CI": "input",
+            "CO": "output",
+            "X": "output",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "1" ],
+            "B": [ 156, 157, 158, 159, 160 ],
+            "BI": [ "0" ],
+            "CI": [ "0" ],
+            "CO": [ 229, 230, 231, 232, 233 ],
+            "X": [ 234, 235, 236, 237, 238 ],
+            "Y": [ 239, 240, 241, 242, 243 ]
+          }
+        },
+        "$auto$alumacc.cc:495:replace_alu$2675": {
+          "hide_name": 1,
+          "type": "$alu",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000101",
+            "Y_WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:134.53-134.90"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "BI": "input",
+            "CI": "input",
+            "CO": "output",
+            "X": "output",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 23 ],
+            "B": [ 244, 245, 246, 247, 248 ],
+            "BI": [ "0" ],
+            "CI": [ "0" ],
+            "CO": [ 249, 250, 251, 252, 253 ],
+            "X": [ 254, 255, 256, 257, 258 ],
+            "Y": [ 259, 260, 261, 262, 263 ]
+          }
+        },
+        "$auto$alumacc.cc:495:replace_alu$2678": {
+          "hide_name": 1,
+          "type": "$alu",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000001000",
+            "Y_WIDTH": "00000000000000000000000000001010"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:121.38-121.73"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "BI": "input",
+            "CI": "input",
+            "CO": "output",
+            "X": "output",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 189, 190, 191, 192, 193, 194, 195, 196, 197, 198 ],
+            "B": [ 181, 182, 183, 184, 185, 186, 187, 188 ],
+            "BI": [ "1" ],
+            "CI": [ "1" ],
+            "CO": [ 264, 265, 266, 267, 268, 269, 270, 271, 272, 273 ],
+            "X": [ 274, 275, 276, 277, 278, 279, 280, 281, 282, 283 ],
+            "Y": [ 284, 285, 286, 287, 288, 289, 290, 291, 292, 293 ]
+          }
+        },
+        "$auto$alumacc.cc:495:replace_alu$2681": {
+          "hide_name": 1,
+          "type": "$alu",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000001010"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:129.72-129.91"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "BI": "input",
+            "CI": "input",
+            "CO": "output",
+            "X": "output",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 189, 190, 191, 192, 193, 194, 195, 196, 197, 198 ],
+            "B": [ "1" ],
+            "BI": [ "1" ],
+            "CI": [ "1" ],
+            "CO": [ 294, 295, 296, 297, 298, 299, 300, 301, 302, 303 ],
+            "X": [ 304, 305, 306, 307, 308, 309, 310, 311, 312, 313 ],
+            "Y": [ 314, 315, 316, 317, 318, 319, 320, 321, 322, 323 ]
+          }
+        },
+        "$auto$alumacc.cc:495:replace_alu$2684": {
+          "hide_name": 1,
+          "type": "$alu",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000010100",
+            "Y_WIDTH": "00000000000000000000000000010100"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:87.52-87.78"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "BI": "input",
+            "CI": "input",
+            "CO": "output",
+            "X": "output",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 324, 325, 326, 327, 328, 329, 330, 331, 332, 333 ],
+            "B": [ 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353 ],
+            "BI": [ "0" ],
+            "CI": [ "0" ],
+            "CO": [ 354, 355, 356, 357, 358, 359, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 372, 373 ],
+            "X": [ 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391, 392, 393 ],
+            "Y": [ 394, 395, 396, 397, 398, 399, 400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413 ]
+          }
+        },
+        "$auto$alumacc.cc:495:replace_alu$2687": {
+          "hide_name": 1,
+          "type": "$alu",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000001001",
+            "Y_WIDTH": "00000000000000000000000000001001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:90.55-90.73"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "BI": "input",
+            "CI": "input",
+            "CO": "output",
+            "X": "output",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "1" ],
+            "B": [ 414, 415, 416, 417, 418, 419, 420, 421, 422 ],
+            "BI": [ "0" ],
+            "CI": [ "0" ],
+            "CO": [ 423, 424, 425, 426, 427, 428, 429, 430, 431 ],
+            "X": [ 432, 433, 434, 435, 436, 437, 438, 439, 440 ],
+            "Y": [ 441, 442, 443, 444, 445, 446, 447, 448, 449 ]
+          }
+        },
+        "$auto$alumacc.cc:89:get_cf$2667": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:51.44-51.85"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 170 ],
+            "Y": [ 450 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$2639": {
+          "hide_name": 1,
+          "type": "$adffe",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0000000000",
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000001010"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:56.4-71.7"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 2 ],
+            "CLK": [ 451 ],
+            "D": [ 452, 453, 454, 455, 456, 457, 458, 459, 460, 461 ],
+            "EN": [ 462 ],
+            "Q": [ 25, 26, 27, 28, 29, 30, 31, 32, 33, 34 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$2642": {
+          "hide_name": 1,
+          "type": "$adffe",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "000",
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:56.4-71.7"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 2 ],
+            "CLK": [ 451 ],
+            "D": [ 6, 7, 8 ],
+            "EN": [ 463 ],
+            "Q": [ 464, 465, 466 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$2643": {
+          "hide_name": 1,
+          "type": "$adffe",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "000",
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:64.4-82.7"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 2 ],
+            "CLK": [ 24 ],
+            "D": [ 3, 4, 5 ],
+            "EN": [ 37 ],
+            "Q": [ 467, 468, 469 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$2644": {
+          "hide_name": 1,
+          "type": "$adffe",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "1000000000",
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000001010"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:64.4-82.7"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 2 ],
+            "CLK": [ 24 ],
+            "D": [ 470, 471, 472, 473, 474, 475, 476, 477, 478, 479 ],
+            "EN": [ 480 ],
+            "Q": [ 189, 190, 191, 192, 193, 194, 195, 196, 197, 198 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$2647": {
+          "hide_name": 1,
+          "type": "$adffe",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "000000000000001",
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "EN_POLARITY": "00000000000000000000000000000000",
+            "WIDTH": "00000000000000000000000000001111"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:64.4-82.7"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 2 ],
+            "CLK": [ 24 ],
+            "D": [ 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494, 37 ],
+            "EN": [ 495 ],
+            "Q": [ 37, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$2648": {
+          "hide_name": 1,
+          "type": "$adffe",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0000000000",
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000001010"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:64.4-82.7"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 2 ],
+            "CLK": [ 24 ],
+            "D": [ 496, 497, 498, 499, 500, 501, 502, 503, 504, 505 ],
+            "EN": [ 506 ],
+            "Q": [ 324, 325, 326, 327, 328, 329, 330, 331, 332, 333 ]
+          }
+        },
+        "$auto$opt_dff.cc:195:make_patterns_logic$2641": {
+          "hide_name": 1,
+          "type": "$ne",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 507, 508 ],
+            "B": [ "0", "1" ],
+            "Y": [ 462 ]
+          }
+        },
+        "$auto$opt_dff.cc:195:make_patterns_logic$2646": {
+          "hide_name": 1,
+          "type": "$ne",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 495, 509 ],
+            "B": [ "1" ],
+            "Y": [ 480 ]
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:103$2500": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000001110",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:103.10-103.38"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 37, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494 ],
+            "B": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1" ],
+            "Y": [ 510 ]
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:104$2501": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000001101",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:104.10-104.38"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 37, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494 ],
+            "B": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1" ],
+            "Y": [ 511 ]
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:105$2502": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000001100",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:105.10-105.38"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 37, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494 ],
+            "B": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1" ],
+            "Y": [ 512 ]
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:106$2503": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000001011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:106.10-106.38"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 37, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494 ],
+            "B": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1" ],
+            "Y": [ 513 ]
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:107$2504": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000001010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:107.10-107.37"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 37, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494 ],
+            "B": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "1" ],
+            "Y": [ 514 ]
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:108$2505": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000001001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:108.10-108.37"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 37, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494 ],
+            "B": [ "0", "0", "0", "0", "0", "0", "0", "0", "1" ],
+            "Y": [ 515 ]
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:109$2506": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000001000",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:109.10-109.37"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 37, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494 ],
+            "B": [ "0", "0", "0", "0", "0", "0", "0", "1" ],
+            "Y": [ 516 ]
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:110$2507": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000111",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:110.10-110.36"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 37, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494 ],
+            "B": [ "0", "0", "0", "0", "0", "0", "1" ],
+            "Y": [ 517 ]
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:111$2508": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000110",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:111.10-111.36"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 37, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494 ],
+            "B": [ "0", "0", "0", "0", "0", "1" ],
+            "Y": [ 518 ]
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:112$2509": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000101",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:112.10-112.36"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 37, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494 ],
+            "B": [ "0", "0", "0", "0", "1" ],
+            "Y": [ 519 ]
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:113$2510": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000100",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:113.10-113.35"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 37, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494 ],
+            "B": [ "0", "0", "0", "1" ],
+            "Y": [ 520 ]
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:114$2511": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:114.10-114.35"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 37, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 521 ]
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:115$2512": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:115.10-115.35"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 37, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494 ],
+            "B": [ "0", "1" ],
+            "Y": [ 522 ]
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:116$2513": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001111",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:116.10-116.35"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 37, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494 ],
+            "B": [ "1" ],
+            "Y": [ 523 ]
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:138$2546": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000101",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:138.39-138.68"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 161, 162, 163, 164, 165 ],
+            "B": [ "1", "1" ],
+            "Y": [ 524 ]
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:139$2547": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000101",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:139.39-139.68"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 161, 162, 163, 164, 165 ],
+            "B": [ "1", "1", "1" ],
+            "Y": [ 525 ]
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:140$2548": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000101",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000100",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:140.39-140.69"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 161, 162, 163, 164, 165 ],
+            "B": [ "1", "1", "1", "1" ],
+            "Y": [ 526 ]
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:141$2549": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000101",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000101",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:141.39-141.69"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 161, 162, 163, 164, 165 ],
+            "B": [ "1", "1", "1", "1", "1" ],
+            "Y": [ 527 ]
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:145$2556": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:145.36-145.67"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 467, 468, 469 ],
+            "B": [ "1" ],
+            "Y": [ 528 ]
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:146$2557": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:146.36-146.67"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 467, 468, 469 ],
+            "B": [ "0", "1" ],
+            "Y": [ 529 ]
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:147$2558": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:147.36-147.67"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 467, 468, 469 ],
+            "B": [ "1", "1" ],
+            "Y": [ 530 ]
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:148$2559": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:148.36-148.67"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 467, 468, 469 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 531 ]
+          }
+        },
+        "$flatten\\cnb.$logic_and$/home/pvc/sar/RTL/adc_control_nonbinary.v:51$2486": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:51.27-51.86"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 532 ],
+            "B": [ 450 ],
+            "Y": [ 495 ]
+          }
+        },
+        "$flatten\\cnb.$logic_and$/home/pvc/sar/RTL/adc_control_nonbinary.v:58$2489": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:58.31-58.79"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 482 ],
+            "B": [ 533 ],
+            "Y": [ 506 ]
+          }
+        },
+        "$flatten\\cnb.$logic_and$/home/pvc/sar/RTL/adc_control_nonbinary.v:59$2492": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:59.31-59.79"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 481 ],
+            "B": [ 533 ],
+            "Y": [ 534 ]
+          }
+        },
+        "$flatten\\cnb.$not$/home/pvc/sar/RTL/adc_control_nonbinary.v:58$2488": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:58.64-58.79"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 495 ],
+            "Y": [ 533 ]
+          }
+        },
+        "$flatten\\cnb.$not$/home/pvc/sar/RTL/adc_control_nonbinary.v:88$2495": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:88.38-88.52"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 37 ],
+            "Y": [ 36 ]
+          }
+        },
+        "$flatten\\cnb.$not$/home/pvc/sar/RTL/adc_control_nonbinary.v:91$2497": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001010",
+            "Y_WIDTH": "00000000000000000000000000001010"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:91.38-91.54"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 189, 190, 191, 192, 193, 194, 195, 196, 197, 198 ],
+            "Y": [ 535, 536, 537, 538, 539, 540, 541, 542, 543, 544 ]
+          }
+        },
+        "$flatten\\cnb.$or$/home/pvc/sar/RTL/adc_control_nonbinary.v:123$2530": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:123.34-123.69"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 37 ],
+            "B": [ 481 ],
+            "Y": [ 545 ]
+          }
+        },
+        "$flatten\\cnb.$or$/home/pvc/sar/RTL/adc_control_nonbinary.v:123$2531": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:123.34-123.86"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 545 ],
+            "B": [ 506 ],
+            "Y": [ 509 ]
+          }
+        },
+        "$flatten\\cnb.$or$/home/pvc/sar/RTL/adc_control_nonbinary.v:50$2483": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:50.25-50.66"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 482 ],
+            "B": [ 483 ],
+            "Y": [ 546 ]
+          }
+        },
+        "$flatten\\cnb.$or$/home/pvc/sar/RTL/adc_control_nonbinary.v:50$2484": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:50.25-50.88"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 546 ],
+            "B": [ 484 ],
+            "Y": [ 532 ]
+          }
+        },
+        "$flatten\\cnb.$procdff$2619": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "00001",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:64.4-82.7"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 2 ],
+            "CLK": [ 24 ],
+            "D": [ 547, 548, 549, 550, 551 ],
+            "Q": [ 156, 157, 158, 159, 160 ]
+          }
+        },
+        "$flatten\\cnb.$procdff$2624": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "00000",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:64.4-82.7"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 2 ],
+            "CLK": [ 24 ],
+            "D": [ 552, 553, 554, 555, 556 ],
+            "Q": [ 244, 245, 246, 247, 248 ]
+          }
+        },
+        "$flatten\\cnb.$procdff$2634": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:64.4-82.7"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 2 ],
+            "CLK": [ 24 ],
+            "D": [ 534 ],
+            "Q": [ 451 ]
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:103$2527": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001000"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:103.9-117.14"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 557, 558, 559, 560, 561, 562, 563, "0" ],
+            "B": [ "1", "0", "0", "1", "0", "0", "1", "1" ],
+            "S": [ 510 ],
+            "Y": [ 181, 182, 183, 184, 185, 186, 187, 188 ]
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:104$2526": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000111"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:104.9-117.14"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 564, 565, 566, 567, 568, 569, 570 ],
+            "B": [ "1", "0", "0", "1", "1", "1", "1" ],
+            "S": [ 511 ],
+            "Y": [ 557, 558, 559, 560, 561, 562, 563 ]
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:105$2525": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000111"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:105.9-117.14"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 571, 572, 573, 574, 575, 576, "0" ],
+            "B": [ "0", "1", "0", "1", "0", "0", "1" ],
+            "S": [ 512 ],
+            "Y": [ 564, 565, 566, 567, 568, 569, 570 ]
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:106$2524": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000110"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:106.9-117.14"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 577, 578, 579, 580, 581, "0" ],
+            "B": [ "1", "0", "1", "1", "0", "1" ],
+            "S": [ 513 ],
+            "Y": [ 571, 572, 573, 574, 575, 576 ]
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:107$2523": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:107.9-117.14"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 582, 583, 584, 585, 586 ],
+            "B": [ "1", "1", "0", "1", "1" ],
+            "S": [ 514 ],
+            "Y": [ 577, 578, 579, 580, 581 ]
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:108$2522": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:108.9-117.14"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 587, 588, 589, 590, "0" ],
+            "B": [ "1", "0", "0", "0", "1" ],
+            "S": [ 515 ],
+            "Y": [ 582, 583, 584, 585, 586 ]
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:109$2521": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:109.9-117.14"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 591, 592, 593, "0" ],
+            "B": [ "0", "1", "0", "1" ],
+            "S": [ 516 ],
+            "Y": [ 587, 588, 589, 590 ]
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:110$2520": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:110.9-117.14"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 594, 595, 596 ],
+            "B": [ "0", "1", "1" ],
+            "S": [ 517 ],
+            "Y": [ 591, 592, 593 ]
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:111$2519": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:111.9-117.14"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 597, 598, "0" ],
+            "B": [ "0", "0", "1" ],
+            "S": [ 518 ],
+            "Y": [ 594, 595, 596 ]
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:112$2518": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:112.9-117.14"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 599, "0" ],
+            "B": [ "0", "1" ],
+            "S": [ 519 ],
+            "Y": [ 597, 598 ]
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:113$2517": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:113.9-117.14"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 600 ],
+            "B": [ "1" ],
+            "S": [ 520 ],
+            "Y": [ 599 ]
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:114$2516": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:114.9-117.14"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 601 ],
+            "B": [ "1" ],
+            "S": [ 521 ],
+            "Y": [ 600 ]
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:115$2515": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:115.9-117.14"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 602 ],
+            "B": [ "1" ],
+            "S": [ 522 ],
+            "Y": [ 601 ]
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:116$2514": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:116.9-117.14"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "1" ],
+            "S": [ 523 ],
+            "Y": [ 602 ]
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:123$2534": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001010"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:123.34-125.78"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 603, 604, 605, 606, 607, 608, 609, 610, 611, 612 ],
+            "B": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "1" ],
+            "S": [ 509 ],
+            "Y": [ 470, 471, 472, 473, 474, 475, 476, 477, 478, 479 ]
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:124$2533": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001010"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:124.34-125.78"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 613, 614, 615, 616, 617, 618, 619, 620, 621, 622 ],
+            "B": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "S": [ 495 ],
+            "Y": [ 603, 604, 605, 606, 607, 608, 609, 610, 611, 612 ]
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:125$2532": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001010"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:125.34-125.78"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 284, 285, 286, 287, 288, 289, 290, 291, 292, 293 ],
+            "B": [ 219, 220, 221, 222, 223, 224, 225, 226, 227, 228 ],
+            "S": [ 623 ],
+            "Y": [ 613, 614, 615, 616, 617, 618, 619, 620, 621, 622 ]
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:129$2537": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001010"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:129.27-129.91"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 314, 315, 316, 317, 318, 319, 320, 321, 322, 323 ],
+            "B": [ 189, 190, 191, 192, 193, 194, 195, 196, 197, 198 ],
+            "S": [ 623 ],
+            "Y": [ 496, 497, 498, 499, 500, 501, 502, 503, 504, 505 ]
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:133$2542": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:133.36-133.81"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "1", "0", "0", "0", "0" ],
+            "B": [ 239, 240, 241, 242, 243 ],
+            "S": [ 495 ],
+            "Y": [ 547, 548, 549, 550, 551 ]
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:134$2544": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:134.36-134.114"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 23, "0", "0", "0", "0" ],
+            "B": [ 259, 260, 261, 262, 263 ],
+            "S": [ 495 ],
+            "Y": [ 552, 553, 554, 555, 556 ]
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:136$2555": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:136.38-142.51"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 23 ],
+            "B": [ 624 ],
+            "S": [ 532 ],
+            "Y": [ 623 ]
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:137$2554": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:137.38-142.51"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 625 ],
+            "B": [ "0" ],
+            "S": [ 495 ],
+            "Y": [ 624 ]
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:138$2553": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:138.38-142.51"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 626 ],
+            "B": [ 245 ],
+            "S": [ 524 ],
+            "Y": [ 625 ]
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:139$2552": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:139.38-142.51"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 627 ],
+            "B": [ 246 ],
+            "S": [ 525 ],
+            "Y": [ 626 ]
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:140$2551": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:140.38-142.51"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 628 ],
+            "B": [ 247 ],
+            "S": [ 526 ],
+            "Y": [ 627 ]
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:141$2550": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:141.38-142.51"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 23 ],
+            "B": [ 248 ],
+            "S": [ 527 ],
+            "Y": [ 628 ]
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:145$2563": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:145.35-149.39"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 629, 630, 631, 632, 633 ],
+            "B": [ "1", "1", "0", "0", "0" ],
+            "S": [ 528 ],
+            "Y": [ 161, 162, 163, 164, 165 ]
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:146$2562": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:146.35-149.39"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 634, 635, 636, 637, 638 ],
+            "B": [ "1", "1", "1", "0", "0" ],
+            "S": [ 529 ],
+            "Y": [ 629, 630, 631, 632, 633 ]
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:147$2561": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:147.35-149.39"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 639, 640, 641, 642, 643 ],
+            "B": [ "1", "1", "1", "1", "0" ],
+            "S": [ 530 ],
+            "Y": [ 634, 635, 636, 637, 638 ]
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:148$2560": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000101"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:148.35-149.39"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "1", "0", "0", "0", "0" ],
+            "B": [ "1", "1", "1", "1", "1" ],
+            "S": [ 531 ],
+            "Y": [ 639, 640, 641, 642, 643 ]
+          }
+        },
+        "$flatten\\ndc.$and$/home/pvc/sar/RTL/adc_row_col_decoder.v:115$2472": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:115.35-115.66"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 644 ],
+            "B": [ 10 ],
+            "Y": [ 645 ]
+          }
+        },
+        "$flatten\\ndc.$and$/home/pvc/sar/RTL/adc_row_col_decoder.v:115$2473": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:115.35-115.81"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 645 ],
+            "B": [ 646 ],
+            "Y": [ 647 ]
+          }
+        },
+        "$flatten\\ndc.$and$/home/pvc/sar/RTL/adc_row_col_decoder.v:143$2481": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000001010",
+            "Y_WIDTH": "00000000000000000000000000001010"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:143.25-143.46"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 97, 98, 99, 100, 101, 102, 103, 104, 105, 106 ],
+            "B": [ 107, 108, 109, 110, 111, 112, 113, 114, 115, 116 ],
+            "Y": [ 648, 649, 650, 651, 652, 653, 654, 655, 656, 657 ]
+          }
+        },
+        "$flatten\\ndc.$eq$/home/pvc/sar/RTL/adc_row_col_decoder.v:115$2470": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:115.35-115.49"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "Y": [ 644 ]
+          }
+        },
+        "$flatten\\ndc.$not$/home/pvc/sar/RTL/adc_row_col_decoder.v:134$2479": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001101",
+            "Y_WIDTH": "00000000000000000000000000001101"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:134.18-134.28"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139 ],
+            "Y": [ 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152 ]
+          }
+        },
+        "$flatten\\ndc.$not$/home/pvc/sar/RTL/adc_row_col_decoder.v:140$2480": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:140.23-140.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 189, 190, 191 ],
+            "Y": [ 153, 154, 155 ]
+          }
+        },
+        "$flatten\\ndc.$not$/home/pvc/sar/RTL/adc_row_col_decoder.v:143$2482": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001010",
+            "Y_WIDTH": "00000000000000000000000000001010"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:143.23-143.47"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 648, 649, 650, 651, 652, 653, 654, 655, 656, 657 ],
+            "Y": [ 117, 118, 119, 120, 121, 122, 123, 124, 125, 126 ]
+          }
+        },
+        "$flatten\\ndc.$not$/home/pvc/sar/RTL/adc_row_col_decoder.v:65$2463": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000010000",
+            "Y_WIDTH": "00000000000000000000000000010000"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:65.29-65.60"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 658, 659, 660, 661, 662, 663, 664, 665, 666, 667, 668, 669, 670, 671, 672, 673 ],
+            "Y": [ 674, 675, 676, 677, 678, 679, 680, 681, 682, 683, 684, 685, 686, 687, 688, 689 ]
+          }
+        },
+        "$flatten\\ndc.$not$/home/pvc/sar/RTL/adc_row_col_decoder.v:87$2467": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:87.21-87.34"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 97 ],
+            "Y": [ 646 ]
+          }
+        },
+        "$flatten\\ndc.$or$/home/pvc/sar/RTL/adc_row_col_decoder.v:115$2474": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:115.15-115.83"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 647 ],
+            "Y": [ 690 ]
+          }
+        },
+        "$flatten\\ndc.$shl$/home/pvc/sar/RTL/adc_row_col_decoder.v:100$2468": {
+          "hide_name": 1,
+          "type": "$shl",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000100001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000100",
+            "Y_WIDTH": "00000000000000000000000000100001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:100.25-100.60"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1" ],
+            "B": [ 192, 193, 194, 195 ],
+            "Y": [ 691, 692, 693, 694, 695, 696, 697, 698, 699, 700, 701, 702, 703, 704, 705, 706, 707, 708, 709, 710, 711, 712, 713, 714, 715, 716, 717, 718, 719, 720, 721, 722, 723 ]
+          }
+        },
+        "$flatten\\ndc.$shl$/home/pvc/sar/RTL/adc_row_col_decoder.v:65$2462": {
+          "hide_name": 1,
+          "type": "$shl",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000010000"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:65.31-65.59"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "1" ],
+            "B": [ 196, 197, 198 ],
+            "Y": [ 658, 659, 660, 661, 662, 663, 664, 665, 666, 667, 668, 669, 670, 671, 672, 673 ]
+          }
+        },
+        "$flatten\\ndc.$shl$/home/pvc/sar/RTL/adc_row_col_decoder.v:66$2464": {
+          "hide_name": 1,
+          "type": "$shl",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000010000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000010000"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:66.32-66.60"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1" ],
+            "B": [ 196, 197, 198 ],
+            "Y": [ 724, 725, 726, 727, 728, 729, 730, 731, 732, 733, 734, 735, 736, 737, 738, 739 ]
+          }
+        },
+        "$flatten\\ndc.$ternary$/home/pvc/sar/RTL/adc_row_col_decoder.v:117$2475": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:117.25-117.67"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 691, 692, 693, 694, 695, 696, 697, 698, 699, 700, 701, 702, 703, 704, 705, 706, 707, 708, 709, 710, 711, 712, 713, 714, 715, 716, 717, 718, 719, 720, 721, 722 ],
+            "B": [ 692, 693, 694, 695, 696, 697, 698, 699, 700, 701, 702, 703, 704, 705, 706, 707, 708, 709, 710, 711, 712, 713, 714, 715, 716, 717, 718, 719, 720, 721, 722, 723 ],
+            "S": [ 690 ],
+            "Y": [ 740, 741, 742, 743, 744, 745, 746, 747, 748, 749, 750, 751, 752, 753, 754, 755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765, 766, 767, 768, 769, 770, 771 ]
+          }
+        },
+        "$flatten\\ndc.$ternary$/home/pvc/sar/RTL/adc_row_col_decoder.v:118$2476": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001101"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:118.25-119.53"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 722, 721, 720, 719, 718, 717, 716, 715, 714, 713, 712, 711, 710 ],
+            "B": [ 723, 722, 721, 720, 719, 718, 717, 716, 715, 714, 713, 712, 711 ],
+            "S": [ 690 ],
+            "Y": [ 772, 773, 774, 775, 776, 777, 778, 779, 780, 781, 782, 783, 784 ]
+          }
+        },
+        "$flatten\\ndc.$ternary$/home/pvc/sar/RTL/adc_row_col_decoder.v:122$2477": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001101"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:122.31-122.72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 740, 741, 742, 743, 744, 745, 746, 747, 748, 749, 750, 751, 752 ],
+            "B": [ 772, 773, 774, 775, 776, 777, 778, 779, 780, 781, 782, 783, 784 ],
+            "S": [ 196 ],
+            "Y": [ 785, 786, 787, 788, 789, 790, 791, 792, 793, 794, 795, 796, 797 ]
+          }
+        },
+        "$flatten\\ndc.$ternary$/home/pvc/sar/RTL/adc_row_col_decoder.v:133$2478": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001101"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:133.20-133.65"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 785, 786, 787, 788, 789, 790, 791, 792, 793, 794, 795, 796, 797 ],
+            "B": [ 771, 769, 767, 765, 763, 761, 759, 757, 755, 753, 751, 749, 747 ],
+            "S": [ 10 ],
+            "Y": [ 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139 ]
+          }
+        },
+        "$flatten\\ndc.$ternary$/home/pvc/sar/RTL/adc_row_col_decoder.v:81$2465": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001010"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:81.20-81.63"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 674, 675, 676, 677, 678, 679, 680, 681, 682, 683 ],
+            "B": [ 689, 687, 685, 683, 681, 679, 677, 675, 674, 676 ],
+            "S": [ 9 ],
+            "Y": [ 97, 98, 99, 100, 101, 102, 103, 104, 105, 106 ]
+          }
+        },
+        "$flatten\\ndc.$ternary$/home/pvc/sar/RTL/adc_row_col_decoder.v:82$2466": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001010"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:82.22-82.69"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 724, 725, 726, 727, 728, 729, 730, 731, 732, 733 ],
+            "B": [ 739, 737, 735, 733, 731, 729, 727, 725, 724, 726 ],
+            "S": [ 9 ],
+            "Y": [ 107, 108, 109, 110, 111, 112, 113, 114, 115, 116 ]
+          }
+        },
+        "$flatten\\osr.$and$/home/pvc/sar/RTL/adc_osr.v:47$2423": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:47.41-47.73"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 798 ],
+            "B": [ 451 ],
+            "Y": [ 35 ]
+          }
+        },
+        "$flatten\\osr.$eq$/home/pvc/sar/RTL/adc_osr.v:100$2442": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:100.25-100.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 464, 465, 466 ],
+            "B": [ "1" ],
+            "Y": [ 799 ]
+          }
+        },
+        "$flatten\\osr.$eq$/home/pvc/sar/RTL/adc_osr.v:101$2443": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:101.25-101.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 464, 465, 466 ],
+            "B": [ "0", "1" ],
+            "Y": [ 800 ]
+          }
+        },
+        "$flatten\\osr.$eq$/home/pvc/sar/RTL/adc_osr.v:102$2444": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:102.25-102.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 464, 465, 466 ],
+            "B": [ "1", "1" ],
+            "Y": [ 801 ]
+          }
+        },
+        "$flatten\\osr.$eq$/home/pvc/sar/RTL/adc_osr.v:103$2445": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:103.25-103.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 464, 465, 466 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 802 ]
+          }
+        },
+        "$flatten\\osr.$eq$/home/pvc/sar/RTL/adc_osr.v:79$2427": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:79.67-79.86"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6, 7, 8 ],
+            "B": [ "0", "0", "1" ],
+            "Y": [ 803 ]
+          }
+        },
+        "$flatten\\osr.$eq$/home/pvc/sar/RTL/adc_osr.v:80$2430": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:80.50-80.72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 414, 415, 416, 417, 418, 419, 420, 421, 422 ],
+            "B": [ "1" ],
+            "Y": [ 804 ]
+          }
+        },
+        "$flatten\\osr.$eq$/home/pvc/sar/RTL/adc_osr.v:81$2432": {
+          "hide_name": 1,
+          "type": "$eq",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000001001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:81.51-81.86"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 414, 415, 416, 417, 418, 419, 420, 421, 422 ],
+            "B": [ 805, 806, 807, 808, 809, 810, 811, 812, 813 ],
+            "Y": [ 814 ]
+          }
+        },
+        "$flatten\\osr.$logic_and$/home/pvc/sar/RTL/adc_osr.v:81$2434": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:81.50-81.107"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 814 ],
+            "B": [ 815 ],
+            "Y": [ 816 ]
+          }
+        },
+        "$flatten\\osr.$not$/home/pvc/sar/RTL/adc_osr.v:79$2429": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:79.31-79.87"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 508 ],
+            "Y": [ 817 ]
+          }
+        },
+        "$flatten\\osr.$not$/home/pvc/sar/RTL/adc_osr.v:81$2433": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:81.90-81.106"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 463 ],
+            "Y": [ 815 ]
+          }
+        },
+        "$flatten\\osr.$or$/home/pvc/sar/RTL/adc_osr.v:79$2426": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:79.33-79.64"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 7 ],
+            "Y": [ 818 ]
+          }
+        },
+        "$flatten\\osr.$or$/home/pvc/sar/RTL/adc_osr.v:79$2428": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:79.33-79.86"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 818 ],
+            "B": [ 803 ],
+            "Y": [ 508 ]
+          }
+        },
+        "$flatten\\osr.$or$/home/pvc/sar/RTL/adc_osr.v:80$2431": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:80.27-80.73"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 817 ],
+            "B": [ 804 ],
+            "Y": [ 463 ]
+          }
+        },
+        "$flatten\\osr.$or$/home/pvc/sar/RTL/adc_osr.v:81$2435": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:81.27-81.108"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 817 ],
+            "B": [ 816 ],
+            "Y": [ 507 ]
+          }
+        },
+        "$flatten\\osr.$procdff$2579": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "00000000000000000000",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000010100"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:56.4-71.7"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 2 ],
+            "CLK": [ 451 ],
+            "D": [ 819, 820, 821, 822, 823, 824, 825, 826, 827, 828, 829, 830, 831, 832, 833, 834, 835, 836, 837, 838 ],
+            "Q": [ 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353 ]
+          }
+        },
+        "$flatten\\osr.$procdff$2589": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "000000001",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000001001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:56.4-71.7"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 2 ],
+            "CLK": [ 451 ],
+            "D": [ 839, 840, 841, 842, 843, 844, 845, 846, 847 ],
+            "Q": [ 414, 415, 416, 417, 418, 419, 420, 421, 422 ]
+          }
+        },
+        "$flatten\\osr.$procdff$2599": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:56.4-71.7"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 2 ],
+            "CLK": [ 451 ],
+            "D": [ 507 ],
+            "Q": [ 798 ]
+          }
+        },
+        "$flatten\\osr.$ternary$/home/pvc/sar/RTL/adc_osr.v:100$2450": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001010"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:100.24-104.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 848, 849, 850, 851, 852, 853, 854, 855, 856, 857 ],
+            "B": [ "0", "0", 821, 822, 823, 824, 825, 826, 827, 828 ],
+            "S": [ 799 ],
+            "Y": [ 858, 859, 860, 861, 862, 863, 864, 865, 866, 867 ]
+          }
+        },
+        "$flatten\\osr.$ternary$/home/pvc/sar/RTL/adc_osr.v:101$2449": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001010"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:101.24-104.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 868, 869, 870, 871, 872, 873, 874, 875, 876, 877 ],
+            "B": [ "0", "0", 823, 824, 825, 826, 827, 828, 829, 830 ],
+            "S": [ 800 ],
+            "Y": [ 848, 849, 850, 851, 852, 853, 854, 855, 856, 857 ]
+          }
+        },
+        "$flatten\\osr.$ternary$/home/pvc/sar/RTL/adc_osr.v:102$2448": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001010"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:102.24-104.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 878, 879, 880, 881, 882, 883, 884, 885, 886, 887 ],
+            "B": [ "0", "0", 825, 826, 827, 828, 829, 830, 831, 832 ],
+            "S": [ 801 ],
+            "Y": [ 868, 869, 870, 871, 872, 873, 874, 875, 876, 877 ]
+          }
+        },
+        "$flatten\\osr.$ternary$/home/pvc/sar/RTL/adc_osr.v:103$2447": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001010"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:103.24-104.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "B": [ "0", "0", 827, 828, 829, 830, 831, 832, 833, 834 ],
+            "S": [ 802 ],
+            "Y": [ 878, 879, 880, 881, 882, 883, 884, 885, 886, 887 ]
+          }
+        },
+        "$flatten\\osr.$ternary$/home/pvc/sar/RTL/adc_osr.v:114$2461": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:114.36-118.40"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 888, 889, 890, 891, 892, 893, 894, 895, 896 ],
+            "B": [ "0", "0", "1", "0", "0", "0", "0", "0", "0" ],
+            "S": [ 799 ],
+            "Y": [ 805, 806, 807, 808, 809, 810, 811, 812, 813 ]
+          }
+        },
+        "$flatten\\osr.$ternary$/home/pvc/sar/RTL/adc_osr.v:115$2460": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:115.36-118.40"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 897, 898, 899, 900, 901, 902, 903, 904, 905 ],
+            "B": [ "0", "0", "0", "0", "1", "0", "0", "0", "0" ],
+            "S": [ 800 ],
+            "Y": [ 888, 889, 890, 891, 892, 893, 894, 895, 896 ]
+          }
+        },
+        "$flatten\\osr.$ternary$/home/pvc/sar/RTL/adc_osr.v:116$2459": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:116.36-118.40"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 906, 907, 908, 909, 910, 911, 912, 913, 914 ],
+            "B": [ "0", "0", "0", "0", "0", "0", "1", "0", "0" ],
+            "S": [ 801 ],
+            "Y": [ 897, 898, 899, 900, 901, 902, 903, 904, 905 ]
+          }
+        },
+        "$flatten\\osr.$ternary$/home/pvc/sar/RTL/adc_osr.v:117$2458": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:117.36-118.40"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "1", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "B": [ "0", "0", "0", "0", "0", "0", "0", "0", "1" ],
+            "S": [ 802 ],
+            "Y": [ 906, 907, 908, 909, 910, 911, 912, 913, 914 ]
+          }
+        },
+        "$flatten\\osr.$ternary$/home/pvc/sar/RTL/adc_osr.v:86$2437": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000010100"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:86.34-87.78"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 394, 395, 396, 397, 398, 399, 400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413 ],
+            "B": [ 324, 325, 326, 327, 328, 329, 330, 331, 332, 333, "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "S": [ 463 ],
+            "Y": [ 819, 820, 821, 822, 823, 824, 825, 826, 827, 828, 829, 830, 831, 832, 833, 834, 835, 836, 837, 838 ]
+          }
+        },
+        "$flatten\\osr.$ternary$/home/pvc/sar/RTL/adc_osr.v:90$2440": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:90.34-90.73"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 441, 442, 443, 444, 445, 446, 447, 448, 449 ],
+            "B": [ "1", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "S": [ 507 ],
+            "Y": [ 839, 840, 841, 842, 843, 844, 845, 846, 847 ]
+          }
+        },
+        "$flatten\\osr.$ternary$/home/pvc/sar/RTL/adc_osr.v:98$2453": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001010"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:98.28-104.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0", "0", "0", "0", "0", "0", 819, 820, 821, 822 ],
+            "B": [ 915, 916, 917, 918, 919, 920, 921, 922, 923, 924 ],
+            "S": [ 508 ],
+            "Y": [ 452, 453, 454, 455, 456, 457, 458, 459, 460, 461 ]
+          }
+        },
+        "$flatten\\osr.$ternary$/home/pvc/sar/RTL/adc_osr.v:99$2452": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001010"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:99.24-104.29"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "B": [ 858, 859, 860, 861, 862, 863, 864, 865, 866, 867 ],
+            "S": [ 507 ],
+            "Y": [ 915, 916, 917, 918, 919, 920, 921, 922, 923, 924 ]
+          }
+        },
+        "$flatten\\pdc.$and$/home/pvc/sar/RTL/adc_row_col_decoder.v:115$2473": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:115.35-115.81"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 645 ],
+            "B": [ 925 ],
+            "Y": [ 926 ]
+          }
+        },
+        "$flatten\\pdc.$and$/home/pvc/sar/RTL/adc_row_col_decoder.v:143$2481": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000001010",
+            "Y_WIDTH": "00000000000000000000000000001010"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:143.25-143.46"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 38, 39, 40, 41, 42, 43, 44, 45, 46, 47 ],
+            "B": [ 48, 49, 50, 51, 52, 53, 54, 55, 56, 57 ],
+            "Y": [ 927, 928, 929, 930, 931, 932, 933, 934, 935, 936 ]
+          }
+        },
+        "$flatten\\pdc.$not$/home/pvc/sar/RTL/adc_row_col_decoder.v:134$2479": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001101",
+            "Y_WIDTH": "00000000000000000000000000001101"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:134.18-134.28"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80 ],
+            "Y": [ 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93 ]
+          }
+        },
+        "$flatten\\pdc.$not$/home/pvc/sar/RTL/adc_row_col_decoder.v:140$2480": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:140.23-140.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 535, 536, 537 ],
+            "Y": [ 94, 95, 96 ]
+          }
+        },
+        "$flatten\\pdc.$not$/home/pvc/sar/RTL/adc_row_col_decoder.v:143$2482": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000001010",
+            "Y_WIDTH": "00000000000000000000000000001010"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:143.23-143.47"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 927, 928, 929, 930, 931, 932, 933, 934, 935, 936 ],
+            "Y": [ 58, 59, 60, 61, 62, 63, 64, 65, 66, 67 ]
+          }
+        },
+        "$flatten\\pdc.$not$/home/pvc/sar/RTL/adc_row_col_decoder.v:65$2463": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000010000",
+            "Y_WIDTH": "00000000000000000000000000010000"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:65.29-65.60"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 937, 938, 939, 940, 941, 942, 943, 944, 945, 946, 947, 948, 949, 950, 951, 952 ],
+            "Y": [ 953, 954, 955, 956, 957, 958, 959, 960, 961, 962, 963, 964, 965, 966, 967, 968 ]
+          }
+        },
+        "$flatten\\pdc.$not$/home/pvc/sar/RTL/adc_row_col_decoder.v:87$2467": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:87.21-87.34"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 38 ],
+            "Y": [ 925 ]
+          }
+        },
+        "$flatten\\pdc.$or$/home/pvc/sar/RTL/adc_row_col_decoder.v:115$2474": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:115.15-115.83"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 926 ],
+            "Y": [ 969 ]
+          }
+        },
+        "$flatten\\pdc.$shl$/home/pvc/sar/RTL/adc_row_col_decoder.v:100$2468": {
+          "hide_name": 1,
+          "type": "$shl",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000100001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000100",
+            "Y_WIDTH": "00000000000000000000000000100001"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:100.25-100.60"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1" ],
+            "B": [ 538, 539, 540, 541 ],
+            "Y": [ 970, 971, 972, 973, 974, 975, 976, 977, 978, 979, 980, 981, 982, 983, 984, 985, 986, 987, 988, 989, 990, 991, 992, 993, 994, 995, 996, 997, 998, 999, 1000, 1001, 1002 ]
+          }
+        },
+        "$flatten\\pdc.$shl$/home/pvc/sar/RTL/adc_row_col_decoder.v:65$2462": {
+          "hide_name": 1,
+          "type": "$shl",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000010000"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:65.31-65.59"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "1" ],
+            "B": [ 542, 543, 544 ],
+            "Y": [ 937, 938, 939, 940, 941, 942, 943, 944, 945, 946, 947, 948, 949, 950, 951, 952 ]
+          }
+        },
+        "$flatten\\pdc.$shl$/home/pvc/sar/RTL/adc_row_col_decoder.v:66$2464": {
+          "hide_name": 1,
+          "type": "$shl",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000010000",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000010000"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:66.32-66.60"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1" ],
+            "B": [ 542, 543, 544 ],
+            "Y": [ 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018 ]
+          }
+        },
+        "$flatten\\pdc.$ternary$/home/pvc/sar/RTL/adc_row_col_decoder.v:117$2475": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000100000"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:117.25-117.67"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 970, 971, 972, 973, 974, 975, 976, 977, 978, 979, 980, 981, 982, 983, 984, 985, 986, 987, 988, 989, 990, 991, 992, 993, 994, 995, 996, 997, 998, 999, 1000, 1001 ],
+            "B": [ 971, 972, 973, 974, 975, 976, 977, 978, 979, 980, 981, 982, 983, 984, 985, 986, 987, 988, 989, 990, 991, 992, 993, 994, 995, 996, 997, 998, 999, 1000, 1001, 1002 ],
+            "S": [ 969 ],
+            "Y": [ 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050 ]
+          }
+        },
+        "$flatten\\pdc.$ternary$/home/pvc/sar/RTL/adc_row_col_decoder.v:118$2476": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001101"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:118.25-119.53"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 1001, 1000, 999, 998, 997, 996, 995, 994, 993, 992, 991, 990, 989 ],
+            "B": [ 1002, 1001, 1000, 999, 998, 997, 996, 995, 994, 993, 992, 991, 990 ],
+            "S": [ 969 ],
+            "Y": [ 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059, 1060, 1061, 1062, 1063 ]
+          }
+        },
+        "$flatten\\pdc.$ternary$/home/pvc/sar/RTL/adc_row_col_decoder.v:122$2477": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001101"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:122.31-122.72"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031 ],
+            "B": [ 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059, 1060, 1061, 1062, 1063 ],
+            "S": [ 542 ],
+            "Y": [ 1064, 1065, 1066, 1067, 1068, 1069, 1070, 1071, 1072, 1073, 1074, 1075, 1076 ]
+          }
+        },
+        "$flatten\\pdc.$ternary$/home/pvc/sar/RTL/adc_row_col_decoder.v:133$2478": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001101"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:133.20-133.65"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 1064, 1065, 1066, 1067, 1068, 1069, 1070, 1071, 1072, 1073, 1074, 1075, 1076 ],
+            "B": [ 1050, 1048, 1046, 1044, 1042, 1040, 1038, 1036, 1034, 1032, 1030, 1028, 1026 ],
+            "S": [ 10 ],
+            "Y": [ 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80 ]
+          }
+        },
+        "$flatten\\pdc.$ternary$/home/pvc/sar/RTL/adc_row_col_decoder.v:81$2465": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001010"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:81.20-81.63"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 953, 954, 955, 956, 957, 958, 959, 960, 961, 962 ],
+            "B": [ 968, 966, 964, 962, 960, 958, 956, 954, 953, 955 ],
+            "S": [ 9 ],
+            "Y": [ 38, 39, 40, 41, 42, 43, 44, 45, 46, 47 ]
+          }
+        },
+        "$flatten\\pdc.$ternary$/home/pvc/sar/RTL/adc_row_col_decoder.v:82$2466": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000001010"
+          },
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:82.22-82.69"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012 ],
+            "B": [ 1018, 1016, 1014, 1012, 1010, 1008, 1006, 1004, 1003, 1005 ],
+            "S": [ 9 ],
+            "Y": [ 48, 49, 50, 51, 52, 53, 54, 55, 56, 57 ]
+          }
+        },
+        "cnb": {
+          "hide_name": 0,
+          "type": "$scopeinfo",
+          "parameters": {
+            "TYPE": "module"
+          },
+          "attributes": {
+            "cell_module_not_derived": "00000000000000000000000000000001",
+            "cell_src": "/home/pvc/sar/RTL/adc_core_digital.v:83.23-95.2",
+            "module": "adc_control_nonbinary",
+            "module_dynports": "00000000000000000000000000000001",
+            "module_hdlname": "adc_control_nonbinary",
+            "module_src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:16.1-151.10"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        },
+        "ndc": {
+          "hide_name": 0,
+          "type": "$scopeinfo",
+          "parameters": {
+            "TYPE": "module"
+          },
+          "attributes": {
+            "cell_module_not_derived": "00000000000000000000000000000001",
+            "cell_src": "/home/pvc/sar/RTL/adc_core_digital.v:114.21-126.2",
+            "module": "adc_row_col_decoder",
+            "module_hdlname": "adc_row_col_decoder",
+            "module_src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:29.1-149.10"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        },
+        "osr": {
+          "hide_name": 0,
+          "type": "$scopeinfo",
+          "parameters": {
+            "TYPE": "module"
+          },
+          "attributes": {
+            "cell_module_not_derived": "00000000000000000000000000000001",
+            "cell_src": "/home/pvc/sar/RTL/adc_core_digital.v:131.9-138.2",
+            "module": "adc_osr",
+            "module_hdlname": "adc_osr",
+            "module_src": "/home/pvc/sar/RTL/adc_osr.v:24.1-119.10"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        },
+        "pdc": {
+          "hide_name": 0,
+          "type": "$scopeinfo",
+          "parameters": {
+            "TYPE": "module"
+          },
+          "attributes": {
+            "cell_module_not_derived": "00000000000000000000000000000001",
+            "cell_src": "/home/pvc/sar/RTL/adc_core_digital.v:100.21-112.2",
+            "module": "adc_row_col_decoder",
+            "module_hdlname": "adc_row_col_decoder",
+            "module_src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:29.1-149.10"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        }
+      },
+      "netnames": {
+        "$auto$alumacc.cc:431:extract_cmp_alu$2663": {
+          "hide_name": 1,
+          "bits": [ 176, 177, 178, 179, 180 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4"
+          }
+        },
+        "$auto$alumacc.cc:511:replace_alu$2665": {
+          "hide_name": 1,
+          "bits": [ 171, 172, 173, 174, 175 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4"
+          }
+        },
+        "$auto$alumacc.cc:511:replace_alu$2670": {
+          "hide_name": 1,
+          "bits": [ 209, 210, 211, 212, 213, 214, 215, 216, 217, 218 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4 5 6 7 8 9"
+          }
+        },
+        "$auto$alumacc.cc:511:replace_alu$2673": {
+          "hide_name": 1,
+          "bits": [ 234, 235, 236, 237, 238 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4"
+          }
+        },
+        "$auto$alumacc.cc:511:replace_alu$2676": {
+          "hide_name": 1,
+          "bits": [ 254, 255, 256, 257, 258 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4"
+          }
+        },
+        "$auto$alumacc.cc:511:replace_alu$2679": {
+          "hide_name": 1,
+          "bits": [ 274, 275, 276, 277, 278, 279, 280, 281, 282, 283 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4 5 6 7 8 9"
+          }
+        },
+        "$auto$alumacc.cc:511:replace_alu$2682": {
+          "hide_name": 1,
+          "bits": [ 304, 305, 306, 307, 308, 309, 310, 311, 312, 313 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4 5 6 7 8 9"
+          }
+        },
+        "$auto$alumacc.cc:511:replace_alu$2685": {
+          "hide_name": 1,
+          "bits": [ 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391, 392, 393 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19"
+          }
+        },
+        "$auto$alumacc.cc:511:replace_alu$2688": {
+          "hide_name": 1,
+          "bits": [ 432, 433, 434, 435, 436, 437, 438, 439, 440 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4 5 6 7 8"
+          }
+        },
+        "$auto$alumacc.cc:512:replace_alu$2666": {
+          "hide_name": 1,
+          "bits": [ 166, 167, 168, 169, 170 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3"
+          }
+        },
+        "$auto$alumacc.cc:512:replace_alu$2671": {
+          "hide_name": 1,
+          "bits": [ 199, 200, 201, 202, 203, 204, 205, 206, 207, 208 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4 5 6 7 8 9"
+          }
+        },
+        "$auto$alumacc.cc:512:replace_alu$2674": {
+          "hide_name": 1,
+          "bits": [ 229, 230, 231, 232, 233 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4"
+          }
+        },
+        "$auto$alumacc.cc:512:replace_alu$2677": {
+          "hide_name": 1,
+          "bits": [ 249, 250, 251, 252, 253 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4"
+          }
+        },
+        "$auto$alumacc.cc:512:replace_alu$2680": {
+          "hide_name": 1,
+          "bits": [ 264, 265, 266, 267, 268, 269, 270, 271, 272, 273 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4 5 6 7 8 9"
+          }
+        },
+        "$auto$alumacc.cc:512:replace_alu$2683": {
+          "hide_name": 1,
+          "bits": [ 294, 295, 296, 297, 298, 299, 300, 301, 302, 303 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4 5 6 7 8 9"
+          }
+        },
+        "$auto$alumacc.cc:512:replace_alu$2686": {
+          "hide_name": 1,
+          "bits": [ 354, 355, 356, 357, 358, 359, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 372, 373 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19"
+          }
+        },
+        "$auto$alumacc.cc:512:replace_alu$2689": {
+          "hide_name": 1,
+          "bits": [ 423, 424, 425, 426, 427, 428, 429, 430, 431 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3 4 5 6 7 8"
+          }
+        },
+        "$auto$opt_dff.cc:194:make_patterns_logic$2640": {
+          "hide_name": 1,
+          "bits": [ 462 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:194:make_patterns_logic$2645": {
+          "hide_name": 1,
+          "bits": [ 480 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:2957:Not$2668": {
+          "hide_name": 1,
+          "bits": [ 450 ],
+          "attributes": {
+          }
+        },
+        "$auto$wreduce.cc:514:run$2649": {
+          "hide_name": 1,
+          "bits": [ 239, 240, 241, 242, 243, 1077, 1078, 1079, 1080, 1081, 1082, 1083, 1084, 1085, 1086, 1087, 1088, 1089, 1090, 1091, 1092, 1093, 1094, 1095, 1096, 1097, 1098, 1099, 1100, 1101, 1102, 1103 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:133.53-133.74",
+            "unused_bits": "5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"
+          }
+        },
+        "$auto$wreduce.cc:514:run$2650": {
+          "hide_name": 1,
+          "bits": [ 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 1104, 1105, 1106, 1107, 1108, 1109, 1110, 1111, 1112, 1113, 1114, 1115, 1116, 1117, 1118, 1119, 1120, 1121, 1122, 1123, 1124, 1125 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:129.72-129.91",
+            "unused_bits": "10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"
+          }
+        },
+        "$auto$wreduce.cc:514:run$2651": {
+          "hide_name": 1,
+          "bits": [ 648, 649, 650, 651, 652, 653, 654, 655, 656, 657, 1126, 1127, 1128, 1129, 1130, 1131 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:143.25-143.46",
+            "unused_bits": "10 11 12 13 14 15"
+          }
+        },
+        "$auto$wreduce.cc:514:run$2652": {
+          "hide_name": 1,
+          "bits": [ 441, 442, 443, 444, 445, 446, 447, 448, 449, 1132, 1133, 1134, 1135, 1136, 1137, 1138, 1139, 1140, 1141, 1142, 1143, 1144, 1145, 1146, 1147, 1148, 1149, 1150, 1151, 1152, 1153, 1154 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:90.55-90.73",
+            "unused_bits": "9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"
+          }
+        },
+        "$auto$wreduce.cc:514:run$2653": {
+          "hide_name": 1,
+          "bits": [ 858, 859, 860, 861, 862, 863, 864, 865, 866, 867, "x", "x", "x", "x", "x", "x", "x", "x" ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:100.24-104.29"
+          }
+        },
+        "$auto$wreduce.cc:514:run$2654": {
+          "hide_name": 1,
+          "bits": [ 848, 849, 850, 851, 852, 853, 854, 855, 856, 857, "x", "x", "x", "x", "x", "x", "0", "0" ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:101.24-104.29"
+          }
+        },
+        "$auto$wreduce.cc:514:run$2655": {
+          "hide_name": 1,
+          "bits": [ 868, 869, 870, 871, 872, 873, 874, 875, 876, 877, "x", "x", "x", "x", "x", "x", "0", "0" ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:102.24-104.29"
+          }
+        },
+        "$auto$wreduce.cc:514:run$2656": {
+          "hide_name": 1,
+          "bits": [ 878, 879, 880, 881, 882, 883, 884, 885, 886, 887, "x", "x", "x", "x", "x", "x", "0", "0" ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:103.24-104.29"
+          }
+        },
+        "$auto$wreduce.cc:514:run$2657": {
+          "hide_name": 1,
+          "bits": [ 888, 889, 890, 891, 892, 893, 894, 895, 896 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:115.36-118.40"
+          }
+        },
+        "$auto$wreduce.cc:514:run$2658": {
+          "hide_name": 1,
+          "bits": [ 897, 898, 899, 900, 901, 902, 903, 904, 905 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:116.36-118.40"
+          }
+        },
+        "$auto$wreduce.cc:514:run$2659": {
+          "hide_name": 1,
+          "bits": [ 906, 907, 908, 909, 910, 911, 912, 913, 914 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:117.36-118.40"
+          }
+        },
+        "$auto$wreduce.cc:514:run$2661": {
+          "hide_name": 1,
+          "bits": [ 915, 916, 917, 918, 919, 920, 921, 922, 923, 924, "x", "x", "x", "x", "x", "x", "x", "x" ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:99.24-104.29"
+          }
+        },
+        "$auto$wreduce.cc:514:run$2662": {
+          "hide_name": 1,
+          "bits": [ 927, 928, 929, 930, 931, 932, 933, 934, 935, 936, 1155, 1156, 1157, 1158, 1159, 1160 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:143.25-143.46",
+            "unused_bits": "10 11 12 13 14 15"
+          }
+        },
+        "$flatten\\cnb.$add$/home/pvc/sar/RTL/adc_control_nonbinary.v:134$2543_Y": {
+          "hide_name": 1,
+          "bits": [ 259, 260, 261, 262, 263 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:134.53-134.90"
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:103$2500_Y": {
+          "hide_name": 1,
+          "bits": [ 510 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:103.10-103.38"
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:104$2501_Y": {
+          "hide_name": 1,
+          "bits": [ 511 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:104.10-104.38"
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:105$2502_Y": {
+          "hide_name": 1,
+          "bits": [ 512 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:105.10-105.38"
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:106$2503_Y": {
+          "hide_name": 1,
+          "bits": [ 513 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:106.10-106.38"
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:107$2504_Y": {
+          "hide_name": 1,
+          "bits": [ 514 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:107.10-107.37"
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:108$2505_Y": {
+          "hide_name": 1,
+          "bits": [ 515 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:108.10-108.37"
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:109$2506_Y": {
+          "hide_name": 1,
+          "bits": [ 516 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:109.10-109.37"
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:110$2507_Y": {
+          "hide_name": 1,
+          "bits": [ 517 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:110.10-110.36"
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:111$2508_Y": {
+          "hide_name": 1,
+          "bits": [ 518 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:111.10-111.36"
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:112$2509_Y": {
+          "hide_name": 1,
+          "bits": [ 519 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:112.10-112.36"
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:113$2510_Y": {
+          "hide_name": 1,
+          "bits": [ 520 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:113.10-113.35"
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:114$2511_Y": {
+          "hide_name": 1,
+          "bits": [ 521 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:114.10-114.35"
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:115$2512_Y": {
+          "hide_name": 1,
+          "bits": [ 522 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:115.10-115.35"
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:116$2513_Y": {
+          "hide_name": 1,
+          "bits": [ 523 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:116.10-116.35"
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:138$2546_Y": {
+          "hide_name": 1,
+          "bits": [ 524 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:138.39-138.68"
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:139$2547_Y": {
+          "hide_name": 1,
+          "bits": [ 525 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:139.39-139.68"
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:140$2548_Y": {
+          "hide_name": 1,
+          "bits": [ 526 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:140.39-140.69"
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:141$2549_Y": {
+          "hide_name": 1,
+          "bits": [ 527 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:141.39-141.69"
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:145$2556_Y": {
+          "hide_name": 1,
+          "bits": [ 528 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:145.36-145.67"
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:146$2557_Y": {
+          "hide_name": 1,
+          "bits": [ 529 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:146.36-146.67"
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:147$2558_Y": {
+          "hide_name": 1,
+          "bits": [ 530 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:147.36-147.67"
+          }
+        },
+        "$flatten\\cnb.$eq$/home/pvc/sar/RTL/adc_control_nonbinary.v:148$2559_Y": {
+          "hide_name": 1,
+          "bits": [ 531 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:148.36-148.67"
+          }
+        },
+        "$flatten\\cnb.$not$/home/pvc/sar/RTL/adc_control_nonbinary.v:58$2488_Y": {
+          "hide_name": 1,
+          "bits": [ 533 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:58.64-58.79"
+          }
+        },
+        "$flatten\\cnb.$or$/home/pvc/sar/RTL/adc_control_nonbinary.v:123$2530_Y": {
+          "hide_name": 1,
+          "bits": [ 545 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:123.34-123.69"
+          }
+        },
+        "$flatten\\cnb.$or$/home/pvc/sar/RTL/adc_control_nonbinary.v:123$2531_Y": {
+          "hide_name": 1,
+          "bits": [ 509 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:123.34-123.86"
+          }
+        },
+        "$flatten\\cnb.$or$/home/pvc/sar/RTL/adc_control_nonbinary.v:50$2483_Y": {
+          "hide_name": 1,
+          "bits": [ 546 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:50.25-50.66"
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:104$2526_Y": {
+          "hide_name": 1,
+          "bits": [ 557, 558, 559, 560, 561, 562, 563, "0", "0", "0" ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:104.9-117.14"
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:105$2525_Y": {
+          "hide_name": 1,
+          "bits": [ 564, 565, 566, 567, 568, 569, 570, "0", "0", "0" ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:105.9-117.14"
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:106$2524_Y": {
+          "hide_name": 1,
+          "bits": [ 571, 572, 573, 574, 575, 576, "0", "0", "0", "0" ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:106.9-117.14"
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:107$2523_Y": {
+          "hide_name": 1,
+          "bits": [ 577, 578, 579, 580, 581, "0", "0", "0", "0", "0" ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:107.9-117.14"
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:108$2522_Y": {
+          "hide_name": 1,
+          "bits": [ 582, 583, 584, 585, 586, "0", "0", "0", "0", "0" ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:108.9-117.14"
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:109$2521_Y": {
+          "hide_name": 1,
+          "bits": [ 587, 588, 589, 590, "0", "0", "0", "0", "0", "0" ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:109.9-117.14"
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:110$2520_Y": {
+          "hide_name": 1,
+          "bits": [ 591, 592, 593, "0", "0", "0", "0", "0", "0", "0" ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:110.9-117.14"
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:111$2519_Y": {
+          "hide_name": 1,
+          "bits": [ 594, 595, 596, "0", "0", "0", "0", "0", "0", "0" ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:111.9-117.14"
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:112$2518_Y": {
+          "hide_name": 1,
+          "bits": [ 597, 598, "0", "0", "0", "0", "0", "0", "0", "0" ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:112.9-117.14"
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:113$2517_Y": {
+          "hide_name": 1,
+          "bits": [ 599, "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:113.9-117.14"
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:114$2516_Y": {
+          "hide_name": 1,
+          "bits": [ 600, "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:114.9-117.14"
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:115$2515_Y": {
+          "hide_name": 1,
+          "bits": [ 601, "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:115.9-117.14"
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:116$2514_Y": {
+          "hide_name": 1,
+          "bits": [ 602, "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:116.9-117.14"
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:124$2533_Y": {
+          "hide_name": 1,
+          "bits": [ 603, 604, 605, 606, 607, 608, 609, 610, 611, 612 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:124.34-125.78"
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:125$2532_Y": {
+          "hide_name": 1,
+          "bits": [ 613, 614, 615, 616, 617, 618, 619, 620, 621, 622 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:125.34-125.78"
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:129$2537_Y": {
+          "hide_name": 1,
+          "bits": [ 496, 497, 498, 499, 500, 501, 502, 503, 504, 505, "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:129.27-129.91"
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:137$2554_Y": {
+          "hide_name": 1,
+          "bits": [ 624 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:137.38-142.51"
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:138$2553_Y": {
+          "hide_name": 1,
+          "bits": [ 625 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:138.38-142.51"
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:139$2552_Y": {
+          "hide_name": 1,
+          "bits": [ 626 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:139.38-142.51"
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:140$2551_Y": {
+          "hide_name": 1,
+          "bits": [ 627 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:140.38-142.51"
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:141$2550_Y": {
+          "hide_name": 1,
+          "bits": [ 628 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:141.38-142.51"
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:146$2562_Y": {
+          "hide_name": 1,
+          "bits": [ 629, 630, 631, 632, 633 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:146.35-149.39"
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:147$2561_Y": {
+          "hide_name": 1,
+          "bits": [ 634, 635, 636, 637, 638 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:147.35-149.39"
+          }
+        },
+        "$flatten\\cnb.$ternary$/home/pvc/sar/RTL/adc_control_nonbinary.v:148$2560_Y": {
+          "hide_name": 1,
+          "bits": [ 639, 640, 641, 642, 643 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:148.35-149.39"
+          }
+        },
+        "$flatten\\ndc.$and$/home/pvc/sar/RTL/adc_row_col_decoder.v:115$2472_Y": {
+          "hide_name": 1,
+          "bits": [ 645 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:115.35-115.66"
+          }
+        },
+        "$flatten\\ndc.$and$/home/pvc/sar/RTL/adc_row_col_decoder.v:115$2473_Y": {
+          "hide_name": 1,
+          "bits": [ 647 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:115.35-115.81"
+          }
+        },
+        "$flatten\\ndc.$eq$/home/pvc/sar/RTL/adc_row_col_decoder.v:115$2470_Y": {
+          "hide_name": 1,
+          "bits": [ 644 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:115.35-115.49"
+          }
+        },
+        "$flatten\\ndc.$shl$/home/pvc/sar/RTL/adc_row_col_decoder.v:65$2462_Y": {
+          "hide_name": 1,
+          "bits": [ 658, 659, 660, 661, 662, 663, 664, 665, 666, 667, 668, 669, 670, 671, 672, 673 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:65.31-65.59"
+          }
+        },
+        "$flatten\\osr.$add$/home/pvc/sar/RTL/adc_osr.v:87$2436_Y": {
+          "hide_name": 1,
+          "bits": [ 394, 395, 396, 397, 398, 399, 400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:87.52-87.78"
+          }
+        },
+        "$flatten\\osr.$eq$/home/pvc/sar/RTL/adc_osr.v:100$2442_Y": {
+          "hide_name": 1,
+          "bits": [ 799 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:100.25-100.45"
+          }
+        },
+        "$flatten\\osr.$eq$/home/pvc/sar/RTL/adc_osr.v:101$2443_Y": {
+          "hide_name": 1,
+          "bits": [ 800 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:101.25-101.45"
+          }
+        },
+        "$flatten\\osr.$eq$/home/pvc/sar/RTL/adc_osr.v:102$2444_Y": {
+          "hide_name": 1,
+          "bits": [ 801 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:102.25-102.45"
+          }
+        },
+        "$flatten\\osr.$eq$/home/pvc/sar/RTL/adc_osr.v:103$2445_Y": {
+          "hide_name": 1,
+          "bits": [ 802 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:103.25-103.45"
+          }
+        },
+        "$flatten\\osr.$eq$/home/pvc/sar/RTL/adc_osr.v:79$2427_Y": {
+          "hide_name": 1,
+          "bits": [ 803 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:79.67-79.86"
+          }
+        },
+        "$flatten\\osr.$eq$/home/pvc/sar/RTL/adc_osr.v:80$2430_Y": {
+          "hide_name": 1,
+          "bits": [ 804 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:80.50-80.72"
+          }
+        },
+        "$flatten\\osr.$eq$/home/pvc/sar/RTL/adc_osr.v:81$2432_Y": {
+          "hide_name": 1,
+          "bits": [ 814 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:81.51-81.86"
+          }
+        },
+        "$flatten\\osr.$logic_and$/home/pvc/sar/RTL/adc_osr.v:81$2434_Y": {
+          "hide_name": 1,
+          "bits": [ 816 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:81.50-81.107"
+          }
+        },
+        "$flatten\\osr.$not$/home/pvc/sar/RTL/adc_osr.v:81$2433_Y": {
+          "hide_name": 1,
+          "bits": [ 815 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:81.90-81.106"
+          }
+        },
+        "$flatten\\osr.$or$/home/pvc/sar/RTL/adc_osr.v:79$2426_Y": {
+          "hide_name": 1,
+          "bits": [ 818 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:79.33-79.64"
+          }
+        },
+        "$flatten\\osr.$or$/home/pvc/sar/RTL/adc_osr.v:79$2428_Y": {
+          "hide_name": 1,
+          "bits": [ 508 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_osr.v:79.33-79.86"
+          }
+        },
+        "$flatten\\pdc.$and$/home/pvc/sar/RTL/adc_row_col_decoder.v:115$2473_Y": {
+          "hide_name": 1,
+          "bits": [ 926 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:115.35-115.81"
+          }
+        },
+        "$flatten\\pdc.$shl$/home/pvc/sar/RTL/adc_row_col_decoder.v:65$2462_Y": {
+          "hide_name": 1,
+          "bits": [ 937, 938, 939, 940, 941, 942, 943, 944, 945, 946, 947, 948, 949, 950, 951, 952 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:65.31-65.59"
+          }
+        },
+        "_unused_ok_pin1": {
+          "hide_name": 0,
+          "bits": [ "1" ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:143.13-143.28"
+          }
+        },
+        "_unused_ok_pin2": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:143.30-143.45"
+          }
+        },
+        "a_clk_dig_in": {
+          "hide_name": 0,
+          "bits": [ 24 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:26.24-26.36"
+          }
+        },
+        "a_comparator_in": {
+          "hide_name": 0,
+          "bits": [ 23 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:25.24-25.39"
+          }
+        },
+        "a_config_1_in": {
+          "hide_name": 0,
+          "bits": [ 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:23.24-23.37"
+          }
+        },
+        "a_config_2_in": {
+          "hide_name": 0,
+          "bits": [ 13, 14, 15, 16, 17, 18, 19, 20, 21, 22 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:24.24-24.37"
+          }
+        },
+        "a_conv_finished_osr_out": {
+          "hide_name": 0,
+          "bits": [ 35 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:30.24-30.47"
+          }
+        },
+        "a_enable_loop_out": {
+          "hide_name": 0,
+          "bits": [ 36 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:31.24-31.41"
+          }
+        },
+        "a_nmatrix_bincap_out_n": {
+          "hide_name": 0,
+          "bits": [ 153, 154, 155 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:54.24-54.46"
+          }
+        },
+        "a_nmatrix_c0_out_n": {
+          "hide_name": 0,
+          "bits": [ "1" ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:55.24-55.42"
+          }
+        },
+        "a_nmatrix_col_out": {
+          "hide_name": 0,
+          "bits": [ 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:53.24-53.41"
+          }
+        },
+        "a_nmatrix_col_out_n": {
+          "hide_name": 0,
+          "bits": [ 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:52.24-52.43"
+          }
+        },
+        "a_nmatrix_row_out_n": {
+          "hide_name": 0,
+          "bits": [ 97, 98, 99, 100, 101, 102, 103, 104, 105, 106 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:49.24-49.43"
+          }
+        },
+        "a_nmatrix_rowoff_out_n": {
+          "hide_name": 0,
+          "bits": [ 117, 118, 119, 120, 121, 122, 123, 124, 125, 126 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:51.24-51.46"
+          }
+        },
+        "a_nmatrix_rowon_out_n": {
+          "hide_name": 0,
+          "bits": [ 107, 108, 109, 110, 111, 112, 113, 114, 115, 116 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:50.24-50.45"
+          }
+        },
+        "a_pmatrix_bincap_out_n": {
+          "hide_name": 0,
+          "bits": [ 94, 95, 96 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:45.24-45.46"
+          }
+        },
+        "a_pmatrix_c0_out_n": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:46.24-46.42"
+          }
+        },
+        "a_pmatrix_col_out": {
+          "hide_name": 0,
+          "bits": [ 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:44.24-44.41"
+          }
+        },
+        "a_pmatrix_col_out_n": {
+          "hide_name": 0,
+          "bits": [ 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:43.24-43.43"
+          }
+        },
+        "a_pmatrix_row_out_n": {
+          "hide_name": 0,
+          "bits": [ 38, 39, 40, 41, 42, 43, 44, 45, 46, 47 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:40.24-40.43"
+          }
+        },
+        "a_pmatrix_rowoff_out_n": {
+          "hide_name": 0,
+          "bits": [ 58, 59, 60, 61, 62, 63, 64, 65, 66, 67 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:42.24-42.46"
+          }
+        },
+        "a_pmatrix_rowon_out_n": {
+          "hide_name": 0,
+          "bits": [ 48, 49, 50, 51, 52, 53, 54, 55, 56, 57 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:41.24-41.45"
+          }
+        },
+        "a_result_out": {
+          "hide_name": 0,
+          "bits": [ 25, 26, 27, 28, 29, 30, 31, 32, 33, 34 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:29.24-29.36"
+          }
+        },
+        "a_rst_n": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:22.24-22.31"
+          }
+        },
+        "a_sample_matrix_out": {
+          "hide_name": 0,
+          "bits": [ 37 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:34.24-34.43"
+          }
+        },
+        "a_sample_matrix_out_n": {
+          "hide_name": 0,
+          "bits": [ 36 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:35.24-35.45"
+          }
+        },
+        "a_sample_switch_out": {
+          "hide_name": 0,
+          "bits": [ 37 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:36.24-36.43"
+          }
+        },
+        "a_sample_switch_out_n": {
+          "hide_name": 0,
+          "bits": [ 36 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:37.24-37.45"
+          }
+        },
+        "cnb.average_count_limit_w": {
+          "hide_name": 0,
+          "bits": [ 161, 162, 163, 164, 165 ],
+          "attributes": {
+            "hdlname": "cnb average_count_limit_w",
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:52.15-52.36"
+          }
+        },
+        "cnb.average_counter_r": {
+          "hide_name": 0,
+          "bits": [ 156, 157, 158, 159, 160 ],
+          "attributes": {
+            "hdlname": "cnb average_counter_r",
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:36.14-36.31"
+          }
+        },
+        "cnb.average_sum_r": {
+          "hide_name": 0,
+          "bits": [ 244, 245, 246, 247, 248 ],
+          "attributes": {
+            "hdlname": "cnb average_sum_r",
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:37.14-37.27"
+          }
+        },
+        "cnb.averaged_comparator_in_w": {
+          "hide_name": 0,
+          "bits": [ 623 ],
+          "attributes": {
+            "hdlname": "cnb averaged_comparator_in_w",
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:53.9-53.33"
+          }
+        },
+        "cnb.avg_control_in": {
+          "hide_name": 0,
+          "bits": [ 3, 4, 5 ],
+          "attributes": {
+            "hdlname": "cnb avg_control_in",
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:23.21-23.35"
+          }
+        },
+        "cnb.clk": {
+          "hide_name": 0,
+          "bits": [ 24 ],
+          "attributes": {
+            "hdlname": "cnb clk",
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:20.15-20.18"
+          }
+        },
+        "cnb.comparator_in": {
+          "hide_name": 0,
+          "bits": [ 23 ],
+          "attributes": {
+            "hdlname": "cnb comparator_in",
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:22.15-22.28"
+          }
+        },
+        "cnb.conv_finished_r": {
+          "hide_name": 0,
+          "bits": [ 451 ],
+          "attributes": {
+            "hdlname": "cnb conv_finished_r",
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:39.8-39.23"
+          }
+        },
+        "cnb.conv_finished_strobe_out": {
+          "hide_name": 0,
+          "bits": [ 451 ],
+          "attributes": {
+            "hdlname": "cnb conv_finished_strobe_out",
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:27.16-27.40"
+          }
+        },
+        "cnb.data_register_r": {
+          "hide_name": 0,
+          "bits": [ 189, 190, 191, 192, 193, 194, 195, 196, 197, 198 ],
+          "attributes": {
+            "hdlname": "cnb data_register_r",
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:35.26-35.41"
+          }
+        },
+        "cnb.enable_loop_out": {
+          "hide_name": 0,
+          "bits": [ 36 ],
+          "attributes": {
+            "hdlname": "cnb enable_loop_out",
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:26.16-26.31"
+          }
+        },
+        "cnb.is_averaging_w": {
+          "hide_name": 0,
+          "bits": [ 495 ],
+          "attributes": {
+            "hdlname": "cnb is_averaging_w",
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:51.9-51.23"
+          }
+        },
+        "cnb.is_holding_result_w": {
+          "hide_name": 0,
+          "bits": [ 481 ],
+          "attributes": {
+            "hdlname": "cnb is_holding_result_w",
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:56.9-56.28"
+          }
+        },
+        "cnb.is_sampling_w": {
+          "hide_name": 0,
+          "bits": [ 37 ],
+          "attributes": {
+            "hdlname": "cnb is_sampling_w",
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:57.9-57.22"
+          }
+        },
+        "cnb.lsb_region_w": {
+          "hide_name": 0,
+          "bits": [ 532 ],
+          "attributes": {
+            "hdlname": "cnb lsb_region_w",
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:50.9-50.21"
+          }
+        },
+        "cnb.next_average_counter_w": {
+          "hide_name": 0,
+          "bits": [ 547, 548, 549, 550, 551 ],
+          "attributes": {
+            "hdlname": "cnb next_average_counter_w",
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:43.15-43.37"
+          }
+        },
+        "cnb.next_average_sum_w": {
+          "hide_name": 0,
+          "bits": [ 552, 553, 554, 555, 556 ],
+          "attributes": {
+            "hdlname": "cnb next_average_sum_w",
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:44.15-44.33"
+          }
+        },
+        "cnb.next_data_register_w": {
+          "hide_name": 0,
+          "bits": [ 470, 471, 472, 473, 474, 475, 476, 477, 478, 479 ],
+          "attributes": {
+            "hdlname": "cnb next_data_register_w",
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:47.27-47.47"
+          }
+        },
+        "cnb.nonbinary_value_w": {
+          "hide_name": 0,
+          "bits": [ 181, 182, 183, 184, 185, 186, 187, 188, "0", "0" ],
+          "attributes": {
+            "hdlname": "cnb nonbinary_value_w",
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:101.27-101.44"
+          }
+        },
+        "cnb.nswitch_out": {
+          "hide_name": 0,
+          "bits": [ 189, 190, 191, 192, 193, 194, 195, 196, 197, 198 ],
+          "attributes": {
+            "hdlname": "cnb nswitch_out",
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:29.34-29.45"
+          }
+        },
+        "cnb.pswitch_out": {
+          "hide_name": 0,
+          "bits": [ 535, 536, 537, 538, 539, 540, 541, 542, 543, 544 ],
+          "attributes": {
+            "hdlname": "cnb pswitch_out",
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:28.34-28.45"
+          }
+        },
+        "cnb.result_out": {
+          "hide_name": 0,
+          "bits": [ 324, 325, 326, 327, 328, 329, 330, 331, 332, 333 ],
+          "attributes": {
+            "hdlname": "cnb result_out",
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:30.33-30.43"
+          }
+        },
+        "cnb.result_ready_w": {
+          "hide_name": 0,
+          "bits": [ 506 ],
+          "attributes": {
+            "hdlname": "cnb result_ready_w",
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:58.9-58.23"
+          }
+        },
+        "cnb.result_strobe_w": {
+          "hide_name": 0,
+          "bits": [ 534 ],
+          "attributes": {
+            "hdlname": "cnb result_strobe_w",
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:59.9-59.24"
+          }
+        },
+        "cnb.rst_n": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "hdlname": "cnb rst_n",
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:21.15-21.20"
+          }
+        },
+        "cnb.sample_out": {
+          "hide_name": 0,
+          "bits": [ 37 ],
+          "attributes": {
+            "hdlname": "cnb sample_out",
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:24.16-24.26"
+          }
+        },
+        "cnb.sample_out_n": {
+          "hide_name": 0,
+          "bits": [ 36 ],
+          "attributes": {
+            "hdlname": "cnb sample_out_n",
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:25.16-25.28"
+          }
+        },
+        "cnb.sampled_avg_control_r": {
+          "hide_name": 0,
+          "bits": [ 467, 468, 469 ],
+          "attributes": {
+            "hdlname": "cnb sampled_avg_control_r",
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:38.14-38.35"
+          }
+        },
+        "cnb.sar_down": {
+          "hide_name": 0,
+          "bits": [ 284, 285, 286, 287, 288, 289, 290, 291, 292, 293 ],
+          "attributes": {
+            "hdlname": "cnb sar_down",
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:121.27-121.35"
+          }
+        },
+        "cnb.sar_up": {
+          "hide_name": 0,
+          "bits": [ 219, 220, 221, 222, 223, 224, 225, 226, 227, 228 ],
+          "attributes": {
+            "hdlname": "cnb sar_up",
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:120.27-120.33"
+          }
+        },
+        "cnb.shift_register_r": {
+          "hide_name": 0,
+          "bits": [ 37, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494 ],
+          "attributes": {
+            "hdlname": "cnb shift_register_r",
+            "src": "/home/pvc/sar/RTL/adc_control_nonbinary.v:34.53-34.69"
+          }
+        },
+        "conv_finished_cnb_n": {
+          "hide_name": 0,
+          "bits": [ 451 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:79.12-79.31"
+          }
+        },
+        "ndc.bincap_out_n": {
+          "hide_name": 0,
+          "bits": [ 153, 154, 155 ],
+          "attributes": {
+            "hdlname": "ndc bincap_out_n",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:38.23-38.35"
+          }
+        },
+        "ndc.c0n_out_n": {
+          "hide_name": 0,
+          "bits": [ "1" ],
+          "attributes": {
+            "hdlname": "ndc c0n_out_n",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:40.23-40.32"
+          }
+        },
+        "ndc.c0p_out_n": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "hdlname": "ndc c0p_out_n",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:39.23-39.32"
+          }
+        },
+        "ndc.col_even_n": {
+          "hide_name": 0,
+          "bits": [ 740, 741, 742, 743, 744, 745, 746, 747, 748, 749, 750, 751, 752, 753, 754, 755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765, 766, 767, 768, 769, 770, 771 ],
+          "attributes": {
+            "hdlname": "ndc col_even_n",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:117.12-117.22",
+            "unused_bits": "14 16 18 20 22 24 26 28 30"
+          }
+        },
+        "ndc.col_mode": {
+          "hide_name": 0,
+          "bits": [ 10 ],
+          "attributes": {
+            "hdlname": "ndc col_mode",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:32.17-32.25"
+          }
+        },
+        "ndc.col_odd_n": {
+          "hide_name": 0,
+          "bits": [ 772, 773, 774, 775, 776, 777, 778, 779, 780, 781, 782, 783, 784, "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+          "attributes": {
+            "hdlname": "ndc col_odd_n",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:118.12-118.21"
+          }
+        },
+        "ndc.col_out": {
+          "hide_name": 0,
+          "bits": [ 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 1161, 1162, 1163, 1164, 1165, 1166, 1167, 1168, 1169, 1170, 1171, 1172, 1173, 1174, 1175, 1176, 1177, 1178, 1179 ],
+          "attributes": {
+            "hdlname": "ndc col_out",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:37.23-37.30",
+            "unused_bits": "13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"
+          }
+        },
+        "ndc.col_out_n": {
+          "hide_name": 0,
+          "bits": [ 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+          "attributes": {
+            "hdlname": "ndc col_out_n",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:36.23-36.32"
+          }
+        },
+        "ndc.col_shift": {
+          "hide_name": 0,
+          "bits": [ 691, 692, 693, 694, 695, 696, 697, 698, 699, 700, 701, 702, 703, 704, 705, 706, 707, 708, 709, 710, 711, 712, 713, 714, 715, 716, 717, 718, 719, 720, 721, 722, 723 ],
+          "attributes": {
+            "hdlname": "ndc col_shift",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:100.12-100.21"
+          }
+        },
+        "ndc.col_sidetoside_n": {
+          "hide_name": 0,
+          "bits": [ 785, 786, 787, 788, 789, 790, 791, 792, 793, 794, 795, 796, 797, "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+          "attributes": {
+            "hdlname": "ndc col_sidetoside_n",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:122.12-122.28"
+          }
+        },
+        "ndc.data_in": {
+          "hide_name": 0,
+          "bits": [ 189, 190, 191, 192, 193, 194, 195, 196, 197, 198 ],
+          "attributes": {
+            "hdlname": "ndc data_in",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:30.22-30.29"
+          }
+        },
+        "ndc.is_first_row": {
+          "hide_name": 0,
+          "bits": [ 646 ],
+          "attributes": {
+            "hdlname": "ndc is_first_row",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:87.6-87.18"
+          }
+        },
+        "ndc.row_bottotop_n": {
+          "hide_name": 0,
+          "bits": [ 674, 675, 676, 677, 678, 679, 680, 681, 682, 683, 684, 685, 686, 687, 688, 689 ],
+          "attributes": {
+            "hdlname": "ndc row_bottotop_n",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:65.12-65.26",
+            "unused_bits": "10 12 14"
+          }
+        },
+        "ndc.row_mode": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "hdlname": "ndc row_mode",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:31.17-31.25"
+          }
+        },
+        "ndc.row_out_n": {
+          "hide_name": 0,
+          "bits": [ 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, "x", "x", "x", "x", "x", "x" ],
+          "attributes": {
+            "hdlname": "ndc row_out_n",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:33.23-33.32"
+          }
+        },
+        "ndc.rowoff_out_n": {
+          "hide_name": 0,
+          "bits": [ 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 1180, 1181, 1182, 1183, 1184, 1185 ],
+          "attributes": {
+            "hdlname": "ndc rowoff_out_n",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:35.23-35.35",
+            "unused_bits": "10 11 12 13 14 15"
+          }
+        },
+        "ndc.rowon_bottotop_n": {
+          "hide_name": 0,
+          "bits": [ 724, 725, 726, 727, 728, 729, 730, 731, 732, 733, 734, 735, 736, 737, 738, 739 ],
+          "attributes": {
+            "hdlname": "ndc rowon_bottotop_n",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:66.12-66.28",
+            "unused_bits": "10 12 14"
+          }
+        },
+        "ndc.rowon_out_n": {
+          "hide_name": 0,
+          "bits": [ 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, "x", "x", "x", "x", "x", "x" ],
+          "attributes": {
+            "hdlname": "ndc rowon_out_n",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:34.23-34.34"
+          }
+        },
+        "ndc.zeroes": {
+          "hide_name": 0,
+          "bits": [ 690 ],
+          "attributes": {
+            "hdlname": "ndc zeroes",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:115.6-115.12"
+          }
+        },
+        "nswitch_cnb": {
+          "hide_name": 0,
+          "bits": [ 189, 190, 191, 192, 193, 194, 195, 196, 197, 198 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:78.12-78.23"
+          }
+        },
+        "osr.bypass_oversampling": {
+          "hide_name": 0,
+          "bits": [ 817 ],
+          "attributes": {
+            "hdlname": "osr bypass_oversampling",
+            "src": "/home/pvc/sar/RTL/adc_osr.v:79.9-79.28"
+          }
+        },
+        "osr.conversion_finished_osr_out": {
+          "hide_name": 0,
+          "bits": [ 35 ],
+          "attributes": {
+            "hdlname": "osr conversion_finished_osr_out",
+            "src": "/home/pvc/sar/RTL/adc_osr.v:30.16-30.43"
+          }
+        },
+        "osr.data_in": {
+          "hide_name": 0,
+          "bits": [ 324, 325, 326, 327, 328, 329, 330, 331, 332, 333 ],
+          "attributes": {
+            "hdlname": "osr data_in",
+            "src": "/home/pvc/sar/RTL/adc_osr.v:28.21-28.28"
+          }
+        },
+        "osr.data_out": {
+          "hide_name": 0,
+          "bits": [ 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 1186, 1187, 1188, 1189, 1190, 1191 ],
+          "attributes": {
+            "hdlname": "osr data_out",
+            "src": "/home/pvc/sar/RTL/adc_osr.v:29.23-29.31",
+            "unused_bits": "10 11 12 13 14 15"
+          }
+        },
+        "osr.data_valid_r": {
+          "hide_name": 0,
+          "bits": [ 798 ],
+          "attributes": {
+            "hdlname": "osr data_valid_r",
+            "src": "/home/pvc/sar/RTL/adc_osr.v:38.16-38.28"
+          }
+        },
+        "osr.data_valid_strobe": {
+          "hide_name": 0,
+          "bits": [ 451 ],
+          "attributes": {
+            "hdlname": "osr data_valid_strobe",
+            "src": "/home/pvc/sar/RTL/adc_osr.v:26.15-26.32"
+          }
+        },
+        "osr.is_first_sample": {
+          "hide_name": 0,
+          "bits": [ 463 ],
+          "attributes": {
+            "hdlname": "osr is_first_sample",
+            "src": "/home/pvc/sar/RTL/adc_osr.v:80.9-80.24"
+          }
+        },
+        "osr.is_last_sample": {
+          "hide_name": 0,
+          "bits": [ 507 ],
+          "attributes": {
+            "hdlname": "osr is_last_sample",
+            "src": "/home/pvc/sar/RTL/adc_osr.v:81.9-81.23"
+          }
+        },
+        "osr.next_data_valid_w": {
+          "hide_name": 0,
+          "bits": [ 507 ],
+          "attributes": {
+            "hdlname": "osr next_data_valid_w",
+            "src": "/home/pvc/sar/RTL/adc_osr.v:73.9-73.26"
+          }
+        },
+        "osr.next_output_w": {
+          "hide_name": 0,
+          "bits": [ 452, 453, 454, 455, 456, 457, 458, 459, 460, 461, "x", "x", "x", "x", "x", "x" ],
+          "attributes": {
+            "hdlname": "osr next_output_w",
+            "src": "/home/pvc/sar/RTL/adc_osr.v:44.16-44.29"
+          }
+        },
+        "osr.next_result_w": {
+          "hide_name": 0,
+          "bits": [ 819, 820, 821, 822, 823, 824, 825, 826, 827, 828, 829, 830, 831, 832, 833, 834, 835, 836, 837, 838 ],
+          "attributes": {
+            "hdlname": "osr next_result_w",
+            "src": "/home/pvc/sar/RTL/adc_osr.v:41.16-41.29"
+          }
+        },
+        "osr.next_sample_count_w": {
+          "hide_name": 0,
+          "bits": [ 839, 840, 841, 842, 843, 844, 845, 846, 847 ],
+          "attributes": {
+            "hdlname": "osr next_sample_count_w",
+            "src": "/home/pvc/sar/RTL/adc_osr.v:43.16-43.35"
+          }
+        },
+        "osr.osr_count_limit_w": {
+          "hide_name": 0,
+          "bits": [ 805, 806, 807, 808, 809, 810, 811, 812, 813 ],
+          "attributes": {
+            "hdlname": "osr osr_count_limit_w",
+            "src": "/home/pvc/sar/RTL/adc_osr.v:114.16-114.33"
+          }
+        },
+        "osr.osr_mode_in": {
+          "hide_name": 0,
+          "bits": [ 6, 7, 8 ],
+          "attributes": {
+            "hdlname": "osr osr_mode_in",
+            "src": "/home/pvc/sar/RTL/adc_osr.v:27.21-27.32"
+          }
+        },
+        "osr.osr_mode_r": {
+          "hide_name": 0,
+          "bits": [ 464, 465, 466 ],
+          "attributes": {
+            "hdlname": "osr osr_mode_r",
+            "src": "/home/pvc/sar/RTL/adc_osr.v:35.16-35.26"
+          }
+        },
+        "osr.output_r": {
+          "hide_name": 0,
+          "bits": [ 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 1186, 1187, 1188, 1189, 1190, 1191 ],
+          "attributes": {
+            "hdlname": "osr output_r",
+            "src": "/home/pvc/sar/RTL/adc_osr.v:37.16-37.24",
+            "unused_bits": "10 11 12 13 14 15"
+          }
+        },
+        "osr.result_r": {
+          "hide_name": 0,
+          "bits": [ 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353 ],
+          "attributes": {
+            "hdlname": "osr result_r",
+            "src": "/home/pvc/sar/RTL/adc_osr.v:34.16-34.24"
+          }
+        },
+        "osr.rst_n": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "hdlname": "osr rst_n",
+            "src": "/home/pvc/sar/RTL/adc_osr.v:25.15-25.20"
+          }
+        },
+        "osr.sample_count_r": {
+          "hide_name": 0,
+          "bits": [ 414, 415, 416, 417, 418, 419, 420, 421, 422 ],
+          "attributes": {
+            "hdlname": "osr sample_count_r",
+            "src": "/home/pvc/sar/RTL/adc_osr.v:36.16-36.30"
+          }
+        },
+        "pdc.bincap_out_n": {
+          "hide_name": 0,
+          "bits": [ 94, 95, 96 ],
+          "attributes": {
+            "hdlname": "pdc bincap_out_n",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:38.23-38.35"
+          }
+        },
+        "pdc.c0n_out_n": {
+          "hide_name": 0,
+          "bits": [ "1" ],
+          "attributes": {
+            "hdlname": "pdc c0n_out_n",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:40.23-40.32"
+          }
+        },
+        "pdc.c0p_out_n": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "hdlname": "pdc c0p_out_n",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:39.23-39.32"
+          }
+        },
+        "pdc.col_even_n": {
+          "hide_name": 0,
+          "bits": [ 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050 ],
+          "attributes": {
+            "hdlname": "pdc col_even_n",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:117.12-117.22",
+            "unused_bits": "14 16 18 20 22 24 26 28 30"
+          }
+        },
+        "pdc.col_mode": {
+          "hide_name": 0,
+          "bits": [ 10 ],
+          "attributes": {
+            "hdlname": "pdc col_mode",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:32.17-32.25"
+          }
+        },
+        "pdc.col_odd_n": {
+          "hide_name": 0,
+          "bits": [ 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059, 1060, 1061, 1062, 1063, "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+          "attributes": {
+            "hdlname": "pdc col_odd_n",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:118.12-118.21"
+          }
+        },
+        "pdc.col_out": {
+          "hide_name": 0,
+          "bits": [ 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 1192, 1193, 1194, 1195, 1196, 1197, 1198, 1199, 1200, 1201, 1202, 1203, 1204, 1205, 1206, 1207, 1208, 1209, 1210 ],
+          "attributes": {
+            "hdlname": "pdc col_out",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:37.23-37.30",
+            "unused_bits": "13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"
+          }
+        },
+        "pdc.col_out_n": {
+          "hide_name": 0,
+          "bits": [ 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+          "attributes": {
+            "hdlname": "pdc col_out_n",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:36.23-36.32"
+          }
+        },
+        "pdc.col_shift": {
+          "hide_name": 0,
+          "bits": [ 970, 971, 972, 973, 974, 975, 976, 977, 978, 979, 980, 981, 982, 983, 984, 985, 986, 987, 988, 989, 990, 991, 992, 993, 994, 995, 996, 997, 998, 999, 1000, 1001, 1002 ],
+          "attributes": {
+            "hdlname": "pdc col_shift",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:100.12-100.21"
+          }
+        },
+        "pdc.col_sidetoside_n": {
+          "hide_name": 0,
+          "bits": [ 1064, 1065, 1066, 1067, 1068, 1069, 1070, 1071, 1072, 1073, 1074, 1075, 1076, "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+          "attributes": {
+            "hdlname": "pdc col_sidetoside_n",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:122.12-122.28"
+          }
+        },
+        "pdc.data_in": {
+          "hide_name": 0,
+          "bits": [ 535, 536, 537, 538, 539, 540, 541, 542, 543, 544 ],
+          "attributes": {
+            "hdlname": "pdc data_in",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:30.22-30.29"
+          }
+        },
+        "pdc.is_first_row": {
+          "hide_name": 0,
+          "bits": [ 925 ],
+          "attributes": {
+            "hdlname": "pdc is_first_row",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:87.6-87.18"
+          }
+        },
+        "pdc.row_bottotop_n": {
+          "hide_name": 0,
+          "bits": [ 953, 954, 955, 956, 957, 958, 959, 960, 961, 962, 963, 964, 965, 966, 967, 968 ],
+          "attributes": {
+            "hdlname": "pdc row_bottotop_n",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:65.12-65.26",
+            "unused_bits": "10 12 14"
+          }
+        },
+        "pdc.row_mode": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "hdlname": "pdc row_mode",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:31.17-31.25"
+          }
+        },
+        "pdc.row_out_n": {
+          "hide_name": 0,
+          "bits": [ 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, "x", "x", "x", "x", "x", "x" ],
+          "attributes": {
+            "hdlname": "pdc row_out_n",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:33.23-33.32"
+          }
+        },
+        "pdc.rowoff_out_n": {
+          "hide_name": 0,
+          "bits": [ 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 1211, 1212, 1213, 1214, 1215, 1216 ],
+          "attributes": {
+            "hdlname": "pdc rowoff_out_n",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:35.23-35.35",
+            "unused_bits": "10 11 12 13 14 15"
+          }
+        },
+        "pdc.rowon_bottotop_n": {
+          "hide_name": 0,
+          "bits": [ 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018 ],
+          "attributes": {
+            "hdlname": "pdc rowon_bottotop_n",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:66.12-66.28",
+            "unused_bits": "10 12 14"
+          }
+        },
+        "pdc.rowon_out_n": {
+          "hide_name": 0,
+          "bits": [ 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, "x", "x", "x", "x", "x", "x" ],
+          "attributes": {
+            "hdlname": "pdc rowon_out_n",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:34.23-34.34"
+          }
+        },
+        "pdc.zeroes": {
+          "hide_name": 0,
+          "bits": [ 969 ],
+          "attributes": {
+            "hdlname": "pdc zeroes",
+            "src": "/home/pvc/sar/RTL/adc_row_col_decoder.v:115.6-115.12"
+          }
+        },
+        "pswitch_cnb": {
+          "hide_name": 0,
+          "bits": [ 535, 536, 537, 538, 539, 540, 541, 542, 543, 544 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:77.12-77.23"
+          }
+        },
+        "result_cnb": {
+          "hide_name": 0,
+          "bits": [ 324, 325, 326, 327, 328, 329, 330, 331, 332, 333 ],
+          "attributes": {
+            "src": "/home/pvc/sar/RTL/adc_core_digital.v:76.12-76.22"
+          }
+        }
+      }
+    }
+  }
+}
